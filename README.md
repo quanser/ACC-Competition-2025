@@ -31,6 +31,6 @@ More details will be released about stages 2 and 3 in a subsequent handbook.
 
 ## Competition Tidbits 📢
 
-- [Stage 1 Overview 📰](https://github.com/QuanserACC/ACC-Competition-2025-Resources/blob/main/Competition%20Tidbits/Stage%201%20Overview.md)
-- [Core Principles of Self Driving 🚗](https://github.com/QuanserACC/ACC-Competition-2025-Resources/blob/main/Competition%20Tidbits/Core%20Principles%20of%20Self-Driving.md)
-- [Software Compatibility 💻](https://github.com/QuanserACC/ACC-Competition-2025-Resources/blob/main/Competition%20Tidbits/Software%20Compatibility.md)
+- [Stage 1 Overview 📰](https://github.com/quanser/ACC-Competition-2025/blob/main/Competition%20Tidbits/Stage%201%20Overview.md)
+- [Core Principles of Self Driving 🚗](https://github.com/quanser/ACC-Competition-2025/blob/main/Competition%20Tidbits/Core%20Principles%20of%20Self-Driving.md)
+- [Software Compatibility 💻](https://github.com/quanser/ACC-Competition-2025/blob/main/Competition%20Tidbits/Software%20Compatibility.md)
