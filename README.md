@@ -7,7 +7,9 @@ In this year’s competition, teams will try to maximize their profits as an aut
 The three stages of the competition are outlined below:
 
 Stage 1: Virtual Design and Submission 
+
 Stage 2: Implementation of Self-Driving algorithm on the Physical QCar 2
+
 Stage 3: On-site Competition  
 
 All registrants will gain access to the Stage 1 virtual design phase, where a team’s skills will be tested in Quanser’s virtual environment. The top 6 teams, based on selected criteria, will be chosen to move on to the second and third stages of the competition.
