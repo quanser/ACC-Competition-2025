@@ -7,7 +7,9 @@ In this year’s competition, teams will try to maximize their profits as an aut
 The three stages of the competition are outlined below:
 
 Stage 1: Virtual Design and Submission 
+
 Stage 2: Implementation of Self-Driving algorithm on the Physical QCar 2
+
 Stage 3: On-site Competition  
 
 All registrants will gain access to the Stage 1 virtual design phase, where a team’s skills will be tested in Quanser’s virtual environment. The top 6 teams, based on selected criteria, will be chosen to move on to the second and third stages of the competition.
@@ -20,7 +22,7 @@ More details will be released about stages 2 and 3 in a subsequent handbook.
 - [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook)
 - [Base Scenarios (Python)](https://github.com/quanser/ACC-Competition-2025/tree/main/Base_Scenarios_Python)
 - [Base Scenarios (MATLAB/Simulink](https://github.com/quanser/ACC-Competition-2025/tree/main/Base_Scenarios_Matlab)
-- [Competition Website](https://www.quanser.com/community/student-competition/2025-american-control-conference-self-driving-car-student-competition/)
+- [Competition Website](https://www.quanser.com/winners/2025-american-control-conference-self-driving-car-student-competition/)
 - [Registration](https://www.quanser.com/community/student-competition/2025-american-control-conference-self-driving-car-student-competition/)
 - [QCar 2 Resources](https://quanserinc.box.com/shared/static/hb3t1xj1zw8t8a191ao8mrdcyjc1nhd6.zip)
 - [Quanser Interactive Labs Support Page](https://portal.quanser.com/Support)
@@ -31,6 +33,6 @@ More details will be released about stages 2 and 3 in a subsequent handbook.
 
 ## Competition Tidbits 📢
 
-- [Stage 1 Overview 📰](https://github.com/QuanserACC/ACC-Competition-2025-Resources/blob/main/Competition%20Tidbits/Stage%201%20Overview.md)
-- [Core Principles of Self Driving 🚗](https://github.com/QuanserACC/ACC-Competition-2025-Resources/blob/main/Competition%20Tidbits/Core%20Principles%20of%20Self-Driving.md)
-- [Software Compatibility 💻](https://github.com/QuanserACC/ACC-Competition-2025-Resources/blob/main/Competition%20Tidbits/Software%20Compatibility.md)
+- [Stage 1 Overview 📰](https://github.com/quanser/ACC-Competition-2025/blob/main/Competition%20Tidbits/Stage%201%20Overview.md)
+- [Core Principles of Self Driving 🚗](https://github.com/quanser/ACC-Competition-2025/blob/main/Competition%20Tidbits/Core%20Principles%20of%20Self-Driving.md)
+- [Software Compatibility 💻](https://github.com/quanser/ACC-Competition-2025/blob/main/Competition%20Tidbits/Software%20Compatibility.md)
