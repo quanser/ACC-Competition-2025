@@ -16,6 +16,11 @@ All registrants will gain access to the Stage 1 virtual design phase, where a te
 In stage 2, the selected teams will receive a physical QCar 2 from Quanser and implement their Self-Driving algorithms on the  QCar2. They will then be required to bring their QCar 2 to the competition venue and compete live against other selected teams.
 More details will be released about stages 2 and 3 in a subsequent handbook.
 
+## Discussions 📣
+
+Teams may discuss amongst each other in the [discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab of the Github. 
+
+We would also like you to post any issues with supplied resources if you find them so that other teams may help or a Quanser representative can address them!
 
 
 ## Resources 🗄️
