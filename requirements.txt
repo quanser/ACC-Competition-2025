@@ -1,0 +1,7 @@
+matplotlib==3.10.0
+numpy==2.2.1
+opencv-python==4.11.0.86
+pygit2==1.17.0
+PyQt6==6.8.0
+pyqtgraph==0.13.7
+pytransform3d==3.11.0
