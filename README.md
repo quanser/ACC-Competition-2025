@@ -2,6 +2,10 @@
 
 This Github Repo will host all the competition resources you will need to successfuly complete the competition. 
 
+## ❗ Announcements 🎤
+
+- Currently, RT Models are not available in Linux, but will be made available February 1st.
+
 ## Competition Overview 🪧
 In this year’s competition, teams will try to maximize their profits as an autonomous taxi service. They will need to navigate through the city to selected pick-up and drop-off coordinates. During the trip, they will encounter different traffic scenarios that they will need to solve while adhering to the rules of the road. Depending on their performance during the trip, the teams will receive a rating for the executed ride that will influence the amount of money earned for the completion of the ride. Students will then receive additional ride requests and will try to maximize the amount of money they earn within a fixed timeframe. 
 The three stages of the competition are outlined below:
@@ -26,10 +30,10 @@ We would also like you to post any issues with supplied resources if you find th
 ## Resources 🗄️
 - [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook)
 - [Base Scenarios (Python)](https://github.com/quanser/ACC-Competition-2025/tree/main/Base_Scenarios_Python)
-- [Base Scenarios (MATLAB/Simulink](https://github.com/quanser/ACC-Competition-2025/tree/main/Base_Scenarios_Matlab)
+- [Base Scenarios (MATLAB/Simulink)](https://github.com/quanser/ACC-Competition-2025/tree/main/Base_Scenarios_Matlab)
 - [Competition Website](https://www.quanser.com/winners/2025-american-control-conference-self-driving-car-student-competition/)
-- [Registration](https://www.quanser.com/community/student-competition/2025-american-control-conference-self-driving-car-student-competition/)
-- [QCar 2 Resources](https://quanserinc.box.com/shared/static/hb3t1xj1zw8t8a191ao8mrdcyjc1nhd6.zip)
+- [Registration](https://forms.office.com/Pages/ResponsePage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BUOFlBR0lITDA3VU9NN0VDUUtPNFBVUTgxVi4u)
+- [QCar 2 Resources](https://quanserinc.box.com/shared/static/aobhyo9fwv5otzfb87i4ccos1nxfn2rz.zip)
 - [Quanser Interactive Labs Support Page](https://portal.quanser.com/Support)
 - [Quanser Interactive Labs Documentation](https://qlabs.quanserdocs.com/en/latest/ )
 - [Quanser Python API Documentation](https://qlabs.quanserdocs.com/en/latest/ )
