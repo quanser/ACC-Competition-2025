@@ -1,3 +1,13 @@
+%--------------------------------------------------------------------%
+
+% This script was intended to be run in the Plane world for the Self
+% Driving Car Studio
+
+%Make sure to run your RT Model after you have run this script 
+
+%--------------------------------------------------------------------%
+
+
 % MATLAB Path
 
 newPathEntry = fullfile(getenv('QAL_DIR'), 'libraries', 'matlab', 'qvl');
@@ -76,14 +86,8 @@ mySidewalk.set_material_properties([0.1,0.1,0.1], 1.0);
 
 
 %QCar
-myCar = QLabsQCar(qlabs, verbose);
+myCar = QLabsQCar2(qlabs, verbose);
 myCar.spawn_id_degrees(0, [0 -1.25 0], [0 0 0], [1, 1, 1], 1) ;
-file_workspace = fullfile(getenv('RTMODELS_DIR'), 'QCar', 'QCar_Workspace.rt-win64');
-
-% Start RT models
-pause(2)
-system(['quarc_run -D -r -t tcpip://localhost:17000 ', file_workspace]);
-pause(3)
 
 %Pedestrian Movement
 %define locations, and flags

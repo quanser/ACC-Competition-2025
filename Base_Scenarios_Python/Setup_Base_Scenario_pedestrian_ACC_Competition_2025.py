@@ -5,7 +5,7 @@ import time
 # environment objects
 
 from qvl.qlabs import QuanserInteractiveLabs
-from qvl.qcar import QLabsQCar
+from qvl.qcar2 import QLabsQCar2
 from qvl.spline_line import QLabsSplineLine
 from qvl.real_time import QLabsRealTime
 from qvl.system import QLabsSystem
@@ -14,6 +14,15 @@ from qvl.person import QLabsPerson
 from qvl.basic_shape import QLabsBasicShape
 from qvl.free_camera import QLabsFreeCamera
 import pal.resources.rtmodels as rtmodels
+
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+#This scenario was designed to by used in the Plane for the QCar
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+
 
 def main():
 
@@ -85,9 +94,8 @@ def main():
 #Function to setup QLabs, Spawn in QCar, and run real time model
 def setup(qlabs):
 
-    myCar = QLabsQCar(qlabs)
+    myCar = QLabsQCar2(qlabs)
     myCar.spawn_id_degrees(actorNumber=0, location=[0,-1.25,0.5], rotation=[0,0,0], scale=[1,1,1])
-    QLabsRealTime().start_real_time_model(rtmodels.QCAR)
 
     #set camera
     myCam = QLabsFreeCamera(qlabs)

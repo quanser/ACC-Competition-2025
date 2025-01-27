@@ -1,3 +1,12 @@
+%--------------------------------------------------------------------%
+
+% This script was intended to be run in the Plane world for the Self
+% Driving Car Studio
+
+%Make sure to run your RT Model after you have run this script 
+
+%--------------------------------------------------------------------%
+
 % MATLAB Path
 
 newPathEntry = fullfile(getenv('QAL_DIR'), 'libraries', 'matlab', 'qvl');
@@ -87,14 +96,9 @@ mySpline.spawn_degrees ([2.05 + x_offset, -1.5 + y_offset, 0.01], [0, 0, 0], [0.
 
 
 %QCar
-myCar = QLabsQCar(qlabs);
+myCar = QLabsQCar2(qlabs);
 myCar.spawn_id_degrees(0, [-1.205, -0.83, 0.005], [0, 0, -44.7], [1/10, 1/10, 1/10], 1);    
-file_workspace = fullfile(getenv('RTMODELS_DIR'), 'QCar', 'QCar_Workspace_studio.rt-win64');
 
-% Start RT models
-pause(2)
-system(['quarc_run -D -r -t tcpip://localhost:17000 ', file_workspace]);
-pause(3)
 
 
 

@@ -5,7 +5,7 @@ import random
 # environment objects
 
 from qvl.qlabs import QuanserInteractiveLabs
-from qvl.qcar import QLabsQCar
+from qvl.qcar2 import QLabsQCar2
 from qvl.spline_line import QLabsSplineLine
 from qvl.real_time import QLabsRealTime
 from qvl.yield_sign import QLabsYieldSign
@@ -16,6 +16,8 @@ import pal.resources.rtmodels as rtmodels
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
 #This scenario was designed to by used in the Plane for the QCar
+
+#After running this script, make sure to run your RT Model
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
@@ -42,7 +44,7 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
     x = hSystem.set_title_string('ACC Self Driving Car Competition', waitForConfirmation=True)
 
 
-    myCar = QLabsQCar(qlabs)
+    myCar = QLabsQCar2(qlabs)
     myCar.spawn_id_degrees(actorNumber=0, location=[0,-1.25,0.5], rotation=[0,0,0], scale=[1,1,1])
     QLabsRealTime().start_real_time_model(rtmodels.QCAR)
 

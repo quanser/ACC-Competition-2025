@@ -4,7 +4,7 @@ import os
 # environment objects
 
 from qvl.qlabs import QuanserInteractiveLabs
-from qvl.qcar import QLabsQCar
+from qvl.qcar2 import QLabsQCar2
 from qvl.free_camera import QLabsFreeCamera
 from qvl.real_time import QLabsRealTime
 from qvl.basic_shape import QLabsBasicShape
@@ -14,6 +14,14 @@ from qvl.qcar_flooring import QLabsQCarFlooring
 from qvl.crosswalk import QLabsCrosswalk
 import pal.resources.rtmodels as rtmodels
 
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+#This scenario was designed to by used in the Plane for the QCar
+
+#After running this script, make sure to run your RT Model
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
 #endregion
 
@@ -69,7 +77,7 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
 
 
     # Spawn a QCar at the given initial pose
-    car2 = QLabsQCar(qlabs)
+    car2 = QLabsQCar2(qlabs)
     car2.spawn_id(actorNumber=0, 
                 location=initialPosition, 
                 rotation=initialOrientation,
