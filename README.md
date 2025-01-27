@@ -2,6 +2,10 @@
 
 This Github Repo will host all the competition resources you will need to successfuly complete the competition. 
 
+## ❗ Announcements 🎤
+
+- Currently, RT Models are not available in Linux, but will be made available February 1st.
+
 ## Competition Overview 🪧
 In this year’s competition, teams will try to maximize their profits as an autonomous taxi service. They will need to navigate through the city to selected pick-up and drop-off coordinates. During the trip, they will encounter different traffic scenarios that they will need to solve while adhering to the rules of the road. Depending on their performance during the trip, the teams will receive a rating for the executed ride that will influence the amount of money earned for the completion of the ride. Students will then receive additional ride requests and will try to maximize the amount of money they earn within a fixed timeframe. 
 The three stages of the competition are outlined below:
