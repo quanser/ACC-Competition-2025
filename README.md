@@ -20,6 +20,8 @@ All registrants will gain access to the Stage 1 virtual design phase, where a te
 In stage 2, the selected teams will receive a physical QCar 2 from Quanser and implement their Self-Driving algorithms on the  QCar2. They will then be required to bring their QCar 2 to the competition venue and compete live against other selected teams.
 More details will be released about stages 2 and 3 in a subsequent handbook.
 
+Please review the Software_Setup section for understanding how python and ROS are meant to be utilized. 
+
 ## Discussions 📣
 
 Teams may discuss amongst each other in the [discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab of the Github. 
@@ -33,7 +35,6 @@ We would also like you to post any issues with supplied resources if you find th
 - [Base Scenarios (MATLAB/Simulink)](https://github.com/quanser/ACC-Competition-2025/tree/main/Base_Scenarios_Matlab)
 - [Competition Website](https://www.quanser.com/winners/2025-american-control-conference-self-driving-car-student-competition/)
 - [Registration](https://forms.office.com/Pages/ResponsePage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BUOFlBR0lITDA3VU9NN0VDUUtPNFBVUTgxVi4u)
-- [QCar 2 Resources](https://quanserinc.box.com/shared/static/aobhyo9fwv5otzfb87i4ccos1nxfn2rz.zip)
 - [Quanser Interactive Labs Support Page](https://portal.quanser.com/Support)
 - [Quanser Interactive Labs Documentation](https://qlabs.quanserdocs.com/en/latest/ )
 - [Quanser Python API Documentation](https://qlabs.quanserdocs.com/en/latest/ )
