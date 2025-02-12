@@ -118,7 +118,7 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
 
 #function to terminate the real time model running
 def terminate():
-    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace'))
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace_studio'))
     QLabsRealTime().terminate_real_time_model(rtModel)
 
 if __name__ == '__main__':
