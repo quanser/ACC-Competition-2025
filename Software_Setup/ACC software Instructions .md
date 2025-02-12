@@ -15,7 +15,7 @@ Linux System based requirements:
 - ROS 2 Humble 
 - Nvidia Based GPU 
 
-Please follow this guide to correctly setup Docker engine on your ground station PC:
+Please follow this guide to correctly setup Docker engine on your ground station PC: \
 https://docs.docker.com/engine/install/ubuntu/ 
 
 Setting up the software environment: 
