@@ -24,13 +24,12 @@ Setting up the software environment:
 
 2. Extract the content of ACC_Resources folder inside the Downloads folder. 
 
-If you are using windows it is assumed the files you're using will be for MATLAB. Please look inside the qcar virtual 
 
-For LINUX Systems:
+For Ubuntu 24.04LTS Systems:
 1. run the setup_linux.py to configure your development environment
 
 How your system should look like: 
-``` bash
+``` bash 
 /home/$USER/Documents/ACC_Development/ 
                         L ros2/
                         L isaac_ros_common/
@@ -63,11 +62,21 @@ sudo apt update
 
  ```sudo docker run --rm -it --network host --name virtual-qcar2 quanser/acc2025-virtual-qcar2 bash  ```
 
-This docker container will include the following setup scripts: 
-* qlabs_reset (Necessary in the case your experiment failed and would like to reset the virtual environment to default) 
-* qlabs_stop (In the case you would like to gracefully close all virtual assets and close your system) 
+This docker container will include the following setup scripts:
+ ``` bash
+/home/qcar2_scripts/python 
+                        L qcar2_restart.py
+                        L qcar2_stop.py
+                        L Base_Scenarios_Python/
+```
 
-You will find the python reset and stop under the folder /home/qcar2_scripts/python.
+Generic restart scripts for getting familiar with the virtual QCar2 
+* qcar2_restart (Necessary in the case your experiment failed and would like to reset the virtual environment to default) 
+* qcar2_stop (In the case you would like to gracefully close all virtual assets and close your system) 
+
+Competition specific scripts are found under `Base_Scenarios_Python`. The scenarios presented in this directory will be how the performance of your autonomous driving algorithms to handle the scenarios presented.
+
+
 
 ## Development Container Setup:
 
