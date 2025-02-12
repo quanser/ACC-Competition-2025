@@ -11,7 +11,7 @@ from qvl.real_time import QLabsRealTime
 from qvl.yield_sign import QLabsYieldSign
 from qvl.system import QLabsSystem
 from qvl.free_camera import QLabsFreeCamera
-import pal.resources.rtmodels as rtmodels
+# import pal.resources.rtmodels as rtmodels
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 

@@ -11,7 +11,7 @@ from qvl.spline_line import QLabsSplineLine
 from qvl.real_time import QLabsRealTime
 from qvl.stop_sign import QLabsStopSign
 from qvl.system import QLabsSystem
-import pal.resources.rtmodels as rtmodels
+
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
@@ -47,7 +47,8 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
 
     myCar = QLabsQCar2(qlabs)
     myCar.spawn_id_degrees(actorNumber=0, location=[0,-1.25,0.5], rotation=[0,0,0], scale=[1,1,1])
-    QLabsRealTime().start_real_time_model(rtmodels.QCAR)
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace'))
+    QLabsRealTime().start_real_time_model(rtModel)
 
     #set camera
     myCam = QLabsFreeCamera(qlabs)
@@ -111,7 +112,9 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
 
 #function to terminate the real time model running
 def terminate():
-    QLabsRealTime().terminate_real_time_model(rtmodels.QCAR)
+    # Get the path for the QCar2 rtModel
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace'))
+    QLabsRealTime().terminate_real_time_model(rtModel)
 
 if __name__ == '__main__':
     setup()

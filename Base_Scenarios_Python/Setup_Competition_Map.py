@@ -12,7 +12,6 @@ from qvl.system import QLabsSystem
 from qvl.walls import QLabsWalls
 from qvl.qcar_flooring import QLabsQCarFlooring
 from qvl.crosswalk import QLabsCrosswalk
-import pal.resources.rtmodels as rtmodels
 
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
@@ -84,6 +83,9 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
                 scale=[.1, .1, .1], 
                 configuration=0, 
                 waitForConfirmation=True)
+    
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace'))
+    QLabsRealTime().start_real_time_model(rtModel)
 
     #spawn cameras 1. birds eye, 2. edge 1, possess the qcar
 
@@ -112,14 +114,12 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
                             scale=[0.27, 0.02, 0.001], 
                             waitForConfirmation=False)
 
-    # Start spawn model
-    QLabsRealTime().start_real_time_model(rtmodels.QCAR_STUDIO)
-
     return car2
 
 #function to terminate the real time model running
 def terminate():
-    QLabsRealTime().terminate_real_time_model(rtmodels.QCAR_STUDIO)
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace'))
+    QLabsRealTime().terminate_real_time_model(rtModel)
 
 if __name__ == '__main__':
     setup()
