@@ -19,8 +19,11 @@ COPY ./misc/usb.ids /usr/share/misc/usb.ids
 
 # Setup the proper configuration for apt to get quanser-sdk
 # Here we're getting the prerelease version
-RUN --mount=type=bind,source=./scripts/configure_private_repo_prerelease.sh,target=configure_private_repo_prerelease.sh \
-    ./configure_private_repo_prerelease.sh
+RUN wget --no-cache https://qrepoprivate.blob.core.windows.net/keys/Quanser.pub
+RUN wget --no-cache https://qrepoprivate.blob.core.windows.net/debian/prerelease/config/99-quanser -O /etc/apt/preferences.d/99-quanser
+RUN wget --no-cache https://qrepoprivate.blob.core.windows.net/debian/prerelease/config/quanser.sources -O /etc/apt/sources.list.d/quanser.sources
+RUN gpg --dearmor --homedir /root --output /usr/share/keyrings/Quanser.gpg Quanser.pub
+RUN rm Quanser.pub
 
 # Install quanser-sdk and quarc-runtime
 RUN apt-get update && apt-get install -y \
