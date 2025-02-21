@@ -24,7 +24,7 @@ Setting up the software environment:
 
 2. Extract the content of ACC_Resources folder inside the Downloads folder. 
 
-3. run the setup_linux.py to configure your development environment
+3. Run the setup_linux.py to configure your development environment
 
 How your system should look like: 
 ``` bash 
@@ -35,7 +35,7 @@ How your system should look like:
                         L dev/
                         L backup/
 ```
-This development folder will be used to save your work done inside Quanser's Docker container and/or the Isaac ROS development container. 
+This development folder will be used to save your work done for the Isaac ROS development container. 
 
 ## Quanser Virtual Environment Container:
 
@@ -72,9 +72,7 @@ Generic restart scripts for getting familiar with the virtual QCar2
 * qcar2_restart (Necessary in the case your experiment failed and would like to reset the virtual environment to default) 
 * qcar2_stop (In the case you would like to gracefully close all virtual assets and close your system) 
 
-Competition specific scripts are found under `Base_Scenarios_Python`. The scenarios presented in this directory will be how the performance of your autonomous driving algorithms to handle the scenarios presented.
-
-
+Competition specific scripts are found under `Base_Scenarios_Python`. Use `Setup_Competition_Map.py` to configure the virtual map as a starting point for what the competition will look like.
 
 ## Development Container Setup:
 
@@ -98,13 +96,16 @@ For software development we will leverage the isaac_ros docker container. This c
 
 Once you are aready to start developing reset the virtual environment:
 
-1. Using the Qunaser's custom container type: python3 qlabs_reset.py 
+1. Using the Qunaser's custom container  navigate to the directory `/home/qcar2_scripts/python/`
+2. Configure the competition map: `python3 Base_Scenarios_Python/Setup_Competition_Map.py`
 
-ROS Specific instructions: 
+ROS Specific Instructions: 
 
-1. Compile the QCar2 ros nodes using colcon build 
-2. Source the QCar2 packages using  
+These instructions focus on the content inside the isaac ros container. 
+1. Compile the QCar2 ros nodes using
+   ```colcon build``` 
+3. Source the QCar2 packages using  
 ```. /install/setup.bash``` 
-3. Launch the nodes for the QCar using the launch file configured for the virtual QCar \
+4. Launch the nodes for the QCar using the launch file configured for the virtual QCar \
  ``` ros2 launch qcar2_nodes qcar_launch_virtual.py  ```
 
