@@ -63,16 +63,8 @@ sudo apt update
 This docker container will include the following setup scripts:
  ``` bash
 /home/qcar2_scripts/python 
-                        L qcar2_restart.py
-                        L qcar2_stop.py
                         L Base_Scenarios_Python/
 ```
-
-Generic restart scripts for getting familiar with the virtual QCar2 
-* qcar2_restart (Necessary in the case your experiment failed and would like to reset the virtual environment to default) 
-* qcar2_stop (In the case you would like to gracefully close all virtual assets and close your system) 
-
-Competition specific scripts are found under `Base_Scenarios_Python`. Use `Setup_Competition_Map.py` to configure the virtual map as a starting point for what the competition will look like.
 
 ## Development Container Setup:
 
@@ -82,30 +74,37 @@ For software development we will leverage the isaac_ros docker container. This c
 
 1. To get started please install [Nvidia-Container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker) 
 
-**_NOTE:_**  If you're not sure what method to use, we recommend you follow the instruction for installing with Apt. 
+**_NOTE:_**  If you're not sure what method to use, scroll to the top of the page and follow the With apt: Ubuntu, Debian' section. You will not need to configure the repository to use experimental packages.
 
 2. you can find the content of the isaac_ros container by going to /home/$USER/Documents/ACC_Development/isaac_ros_common/
 3. To start the container use the command 
 
- ``` .scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/ros2  ``` 
+ ``` ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/ros2  ``` 
 
 **_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added. 
 
     
 ## Getting started:
 
-Once you are aready to start developing reset the virtual environment:
+Once you are ready to start developing, follow these steps to start the virtual environment:
 
-1. Using the Qunaser's custom container  navigate to the directory `/home/qcar2_scripts/python/`
+1. Using the Quanser's custom container navigate to the directory `cd /home/qcar2_scripts/python/`
 2. Configure the competition map: `python3 Base_Scenarios_Python/Setup_Competition_Map.py`
 
-ROS Specific Instructions: 
+ROS Specific Instructions: ./install/setup.bashros2 launch qcar2_nodes qcar_launch_virtual.py 
 
 These instructions focus on the content inside the isaac ros container. 
 1. Compile the QCar2 ros nodes using \
 ```colcon build``` 
 3. Source the QCar2 packages using \
-```. /install/setup.bash``` 
+```. install/setup.bash``` 
 4. Launch the nodes for the QCar using the launch file configured for the virtual QCar \
- ``` ros2 launch qcar2_nodes qcar_launch_virtual.py  ```
+ ``` ros2 launch qcar2_nodes qcar2_launch_virtual.py  ```
+
+## How to stop the RT Model
+
+When the Setup_Competition_Map.py file gets run, a real-time application (RT Model) is deployed that communicates with the virtual QCar 2. It is important to gracefully stop this model once you are no longer using your current workspace. Run the following commands to stop the RT Model:
+
+1. Using the Quanser's custom container navigate to the directory ```cd /home/qcar2_scripts/python/```
+2. To stop the RT Model run the following command: ```python3 qcar2_stop.py```
 
