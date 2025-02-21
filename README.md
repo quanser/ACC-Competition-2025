@@ -33,6 +33,7 @@ We would also like you to post any issues with supplied resources if you find th
 ## Resources 🗄️
 - [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook)
 - [Competition Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z)
+    - Password: acc2025denver
 - [Base Scenarios (Python)](https://github.com/quanser/ACC-Competition-2025/tree/main/Base_Scenarios_Python)
 - [Competition Website](https://www.quanser.com/winners/2025-american-control-conference-self-driving-car-student-competition/)
 - [Registration](https://forms.office.com/Pages/ResponsePage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BUOFlBR0lITDA3VU9NN0VDUUtPNFBVUTgxVi4u)
