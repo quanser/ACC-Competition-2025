@@ -102,9 +102,9 @@ Once you are aready to start developing reset the virtual environment:
 ROS Specific Instructions: 
 
 These instructions focus on the content inside the isaac ros container. 
-1. Compile the QCar2 ros nodes using
-   ```colcon build``` 
-3. Source the QCar2 packages using  
+1. Compile the QCar2 ros nodes using \
+```colcon build``` 
+3. Source the QCar2 packages using \
 ```. /install/setup.bash``` 
 4. Launch the nodes for the QCar using the launch file configured for the virtual QCar \
  ``` ros2 launch qcar2_nodes qcar_launch_virtual.py  ```
