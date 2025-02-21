@@ -20,7 +20,7 @@ https://docs.docker.com/engine/install/ubuntu/
 
 Setting up the software environment: 
 
-1. Download the ACC resources available from Quanser [ACC Resources](https://quanserinc.box.com/shared/static/aobhyo9fwv5otzfb87i4ccos1nxfn2rz.zip).
+1. Download the ACC resources available from Quanser [ACC Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z).
 
 2. Extract the content of ACC_Resources folder inside the Downloads folder. 
 
