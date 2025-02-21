@@ -4,6 +4,7 @@ This Github Repo will host all the competition resources you will need to succes
 
 ## ❗ Announcements 🎤
 
+- If you have any questions not answered in the discussions tab, please email studentcompetition@quanser.com. 
 - If your university is using Python and/or ROS to architect their solution please review the `/software_setup/ACC software Instructions` for getting started with your system.  
 
 ## Competition Overview 🪧
