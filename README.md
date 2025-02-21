@@ -32,7 +32,6 @@ We would also like you to post any issues with supplied resources if you find th
 ## Resources 🗄️
 - [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook)
 - [Base Scenarios (Python)](https://github.com/quanser/ACC-Competition-2025/tree/main/Base_Scenarios_Python)
-- [Base Scenarios (MATLAB/Simulink)](https://github.com/quanser/ACC-Competition-2025/tree/main/Base_Scenarios_Matlab)
 - [Competition Website](https://www.quanser.com/winners/2025-american-control-conference-self-driving-car-student-competition/)
 - [Registration](https://forms.office.com/Pages/ResponsePage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BUOFlBR0lITDA3VU9NN0VDUUtPNFBVUTgxVi4u)
 - [Quanser Interactive Labs Support Page](https://portal.quanser.com/Support)
@@ -41,8 +40,3 @@ We would also like you to post any issues with supplied resources if you find th
 - [Quanser C API Documentation](https://docs.quanser.com/quarc/documentation/hardware_reference_c.html)
 - [Quanser QUARC Blocks for MALTAB/Simulink Documentation](https://docs.quanser.com/quarc/documentation/quarc_block_categories.html)
 
-## Competition Tidbits 📢
-
-- [Stage 1 Overview 📰](https://github.com/quanser/ACC-Competition-2025/blob/main/Competition%20Tidbits/Stage%201%20Overview.md)
-- [Core Principles of Self Driving 🚗](https://github.com/quanser/ACC-Competition-2025/blob/main/Competition%20Tidbits/Core%20Principles%20of%20Self-Driving.md)
-- [Software Compatibility 💻](https://github.com/quanser/ACC-Competition-2025/blob/main/Competition%20Tidbits/Software%20Compatibility.md)
