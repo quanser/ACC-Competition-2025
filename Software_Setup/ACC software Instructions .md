@@ -24,9 +24,7 @@ Setting up the software environment:
 
 2. Extract the content of ACC_Resources folder inside the Downloads folder. 
 
-
-For Ubuntu 24.04LTS Systems:
-1. run the setup_linux.py to configure your development environment
+3. run the setup_linux.py to configure your development environment
 
 How your system should look like: 
 ``` bash 
