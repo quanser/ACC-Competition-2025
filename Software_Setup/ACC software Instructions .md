@@ -88,8 +88,12 @@ For software development we will leverage the isaac_ros docker container. This c
 
 Once you are ready to start developing, follow these steps to start the virtual environment:
 
-1. Using the Quanser's custom container navigate to the directory `cd /home/qcar2_scripts/python/`
-2. Configure the competition map: `python3 Base_Scenarios_Python/Setup_Competition_Map.py`
+1. Natively in Ubuntu, open the QLabs application and navigate to the SDCS then the Open Plane.
+2. Using the Quanser Virtual Environment Docker container, navigate to the following directory: `cd /home/qcar2_scripts/python/`
+3. Run the following Python script to spawn the competition map into QLabs: `python3 Base_Scenarios_Python/Setup_Competition_Map.py`
+
+Once everything has run to completion, the QLabs world should look like the following:
+
 
 ROS Specific Instructions: ./install/setup.bashros2 launch qcar2_nodes qcar_launch_virtual.py 
 
@@ -105,6 +109,6 @@ These instructions focus on the content inside the isaac ros container.
 
 When the Setup_Competition_Map.py file gets run, a real-time application (RT Model) is deployed that communicates with the virtual QCar 2. It is important to gracefully stop this model once you are no longer using your current workspace. Run the following commands to stop the RT Model:
 
-1. Using the Quanser's custom container navigate to the directory ```cd /home/qcar2_scripts/python/```
+1. Using the Quanser Virtual Environment Docker container, navigate to the following directory: ```cd /home/qcar2_scripts/python/```
 2. To stop the RT Model run the following command: ```python3 qcar2_stop.py```
 
