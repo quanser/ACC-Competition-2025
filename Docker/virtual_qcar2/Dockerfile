@@ -55,11 +55,10 @@ RUN --mount=type=bind,source=./qvl/install.py,target=install.py \
 COPY ./qvl/real_time.py /QLabs_Resources/libraries/python/qvl/real_time.py
 
 # Python scripts to start and stop virtual qcar2
-COPY ./python/qcar2_restart.py /home/qcar2_scripts/python/qcar2_restart.py
-COPY ./python/qcar2_stop.py /home/qcar2_scripts/python/qcar2_stop.py
+COPY ./python/ /home/qcar2_scripts/python/
 
 # Put the QCar2_Workspace spawn model on the image
-COPY ./misc/QCar2_Workspace.rt-linux_x86_64 /virtual_plants/rt_models/QCar2/QCar2_Workspace.rt-linux_x86_64
+COPY ./misc/*.rt-linux_x86_64 /virtual_plants/rt_models/QCar2/
 
 # Set the environment variables that would be set by QVL
 ENV QAL_DIR=/QLabs_Resources/
