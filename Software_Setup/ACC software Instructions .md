@@ -94,6 +94,7 @@ Once you are ready to start developing, follow these steps to start the virtual 
 
 Once everything has run to completion, the QLabs world should look like the following:
 
+![QLabs after running Setup_Competition_Map.py](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/HowToStart.png "QLabs after running Setup_Competition_Map.py")
 
 ROS Specific Instructions: ./install/setup.bashros2 launch qcar2_nodes qcar_launch_virtual.py 
 
