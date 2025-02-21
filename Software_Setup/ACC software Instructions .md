@@ -1,7 +1,7 @@
-# ROS 2/Python setup for ACC Competition
+# ROS 2/Python Setup for ACC Competition
 
 ## Description: 
-Welcome to then ACC Quanser Self-Driving Car Student Competition - software setup!
+Welcome to the ACC Quanser Self-Driving Car Student Competition - software setup!
 In this document we will describe:
 - System requirements for the virtual portion of the ACC competition
 - How to setup your system before starting the competition
