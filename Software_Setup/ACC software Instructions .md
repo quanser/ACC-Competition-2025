@@ -76,7 +76,7 @@ For software development we will leverage the isaac_ros docker container. This c
 
 **_NOTE:_**  If you're not sure what method to use, scroll to the top of the page and follow the With apt: Ubuntu, Debian' section. You will not need to configure the repository to use experimental packages.
 
-2. you can find the content of the isaac_ros container by going to /home/$USER/Documents/ACC_Development/isaac_ros_common/
+2. you can find the content of the isaac_ros container by going to the following directory: ```/home/$USER/Documents/ACC_Development/isaac_ros_common/```
 3. To start the container use the command 
 
  ``` ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/ros2  ``` 
@@ -96,7 +96,7 @@ Once everything has run to completion, the QLabs world should look like the foll
 
 ![QLabs after running Setup_Competition_Map.py](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/HowToStart.png "QLabs after running Setup_Competition_Map.py")
 
-ROS Specific Instructions: ./install/setup.bashros2 launch qcar2_nodes qcar_launch_virtual.py 
+ROS Specific Instructions:  
 
 These instructions focus on the content inside the isaac ros container. 
 1. Compile the QCar2 ros nodes using \
