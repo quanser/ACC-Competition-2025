@@ -80,8 +80,8 @@ def main():
             print("QCar2 ros files do not exist in src folder... please redownload resources and rerun setup_linux.py")
             return
         
-        # Copy base scenarios inside scripts folder for virtual qcar2 docker container. This will also give the students a way to reset their environment
-        copyScenariosROSFiles =  subprocess.call("cp /home/$USER/Documents/ACC_Development/ACC-Competition-2025/Base_Scenarios_Python/*.py /home/$USER/Documents/ACC_Development/docker/virtual_qcar2/python",shell=True)
+        # Copy the libraries folder inside isaac ros folder for it to be mounted in isaac ros image
+        copyScenariosROSFiles =  subprocess.call("cp -r /home/$USER/Documents/ACC_Development/src/libraries/ /home/$USER/Documents/ACC_Development/docker/",shell=True)
         
         # create a backup directory
         createBackupDir = subprocess.call("mkdir /home/$USER/Documents/ACC_Development/backup", shell=True)
