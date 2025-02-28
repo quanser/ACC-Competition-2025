@@ -4,8 +4,9 @@ This Github Repo will host all the competition resources you will need to succes
 
 ## ❗ Announcements 🎤
 
-- If you have any questions not answered in the discussions tab, please email studentcompetition@quanser.com. 
-- If your university is using Python and/or ROS to architect their solution please review the `/software_setup/ACC software Instructions` for getting started with your system.  
+- <strong> To get started with the competition please view the [Software_Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md) folder. </strong>
+- <strong> We want to make it very clear that the intended use case is using Ubuntu 24.04 and an Nvidia based graphics card for the competition. </strong>
+- If you have any questions not answered in the [Discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab or the [Issues](https://github.com/quanser/ACC-Competition-2025/issues) tab, please email studentcompetition@quanser.com.
 
 ## Competition Overview 🪧
 In this year’s competition, teams will try to maximize their profits as an autonomous taxi service. They will need to navigate through the city to selected pick-up and drop-off coordinates. During the trip, they will encounter different traffic scenarios that they will need to solve while adhering to the rules of the road. Depending on their performance during the trip, the teams will receive a rating for the executed ride that will influence the amount of money earned for the completion of the ride. Students will then receive additional ride requests and will try to maximize the amount of money they earn within a fixed timeframe. 
