@@ -9,10 +9,9 @@ In this document we will describe:
 
 ## Prerequisites 
 
-Linux System based requirements:
+Linux System base requirements:
 
 - Ubuntu 24.04 LTS
-- ROS 2 Humble 
 - Nvidia Based GPU 
 
 Please follow this guide to correctly setup Docker engine on your ground station PC: \
