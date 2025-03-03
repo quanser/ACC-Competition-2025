@@ -84,7 +84,7 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
                 configuration=0, 
                 waitForConfirmation=True)
     
-    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace'))
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace_studio'))
     QLabsRealTime().start_real_time_model(rtModel)
 
     #spawn cameras 1. birds eye, 2. edge 1, possess the qcar
