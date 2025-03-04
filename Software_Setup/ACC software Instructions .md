@@ -40,6 +40,10 @@ This development folder will be used to save your work done for the Isaac ROS de
 
 The purpose of this docker container is to ensure safe setup of the Quanser Interactive Labs virtual environment. 
 
+<strong> To pull the most recent version of the Docker container from Dockerhub use the following command: </strong>
+
+     docker pull quanser/acc2025-virtual-qcar2 
+
 1. Download the latest debian packages (only need to do once): 
 ``` bash 
 wget --no-cache https://repo.quanser.com/debian/prerelease/config/configure_repo_prerelease.sh 
@@ -57,7 +61,7 @@ sudo apt update
 
 5. To setup Quanser's custom python docker navigate to the folder `/home/$USER/Documents/ACC_Development/docker/virtual_qcar2` and run the following command: 
 
- ```sudo docker run --rm -it --network host --name virtual-qcar2 quanser/acc2025-virtual-qcar2 bash  ```
+   ```sudo docker run --rm -it --network host --name virtual-qcar2 quanser/acc2025-virtual-qcar2 bash  ```
 
 This docker container will include the following setup scripts:
  ``` bash
@@ -75,10 +79,10 @@ For software development we will leverage the isaac_ros docker container. This c
 
 **_NOTE:_**  If you're not sure what method to use, scroll to the top of the page and follow the With apt: Ubuntu, Debian' section. You will not need to configure the repository to use experimental packages.
 
-2. you can find the content of the isaac_ros container by going to the following directory: ```/home/$USER/Documents/ACC_Development/isaac_ros_common/```
+2. you can find the content of the isaac_ros container by going to the following directory: ```cd /home/$USER/Documents/ACC_Development/isaac_ros_common/```
 3. To start the container use the command 
 
- ``` ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/ros2  ``` 
+   ``` ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/ros2  ``` 
 
 **_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added. 
 
