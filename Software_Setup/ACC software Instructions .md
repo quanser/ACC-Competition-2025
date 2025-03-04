@@ -42,10 +42,10 @@ The purpose of this docker container is to ensure safe setup of the Quanser Inte
 
 1. Download the latest debian packages (only need to do once): 
 ``` bash 
-wget --no-cache https://repo.quanser.com/debian/release/config/configure_repo.sh 
-chmod u+x configure_repo.sh
+wget --no-cache https://repo.quanser.com/debian/prerelease/config/configure_repo_prerelease.sh 
+chmod u+x configure_repo_prerelease.sh
 ./configure_repo.sh 
-rm -f ./configure_repo.sh 
+rm -f ./configure_repo_prerelease.sh 
 sudo apt update 
 ```
 2. To install QLabs and Python and QUARC runtime 
