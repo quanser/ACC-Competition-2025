@@ -95,7 +95,7 @@ cd /home/$USER/Documents/ACC_Development/isaac_ros_common
 
 4. <strong> To open additional terminals attached to the Development docker container </strong>, run steps 2 and 3 again in a new terminal.
     
-## Getting started:
+## How to Run the ROS2 Humble Nodes:
 
 Once you are ready to start developing, follow these steps to start the virtual environment:
 
@@ -143,7 +143,7 @@ ros2 launch qcar2_nodes qcar2_launch_virtual.py
 
 ## How to stop the RT Model
 
-When the Setup_Competition_Map.py file (or any other base scenario file provided) gets run, a real-time application (RT Model) is deployed that communicates with the virtual QCar 2. It is important to gracefully stop this model once you are no longer using your current workspace. Run the following commands to stop the RT Model:
+When the Setup_Competition_Map.py file gets run (or any other base scenario file provided), a real-time application (RT Model) is deployed that communicates with the virtual QCar 2. This RT Model is what the QCar2 ROS nodes communicate with. It is important to gracefully stop this model once you are no longer using your current workspace. Run the following commands to stop the RT Model:
 
 1. Using the Quanser Virtual Environment Docker container, navigate to the following directory:
 ```
