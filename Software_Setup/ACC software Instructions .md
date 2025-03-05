@@ -129,7 +129,7 @@ colcon build
 ros2 launch qcar2_nodes qcar2_launch_virtual.py
 ```
 
-<strong>Development Note: </strong> When you stop and remove a Docker container, it will revert back to it's original state. To develop code that persists after you stop and re-run a container, create a folder under the following directory. This will ensure that the Isaac-ROS container gets built with your development files.
+<strong>Development Note: </strong> When a docker container is exited, all the changes done inside the container will be lost. Starting the Development container (Isaac-ROS) links the `/home/$USER/Documents/ACC_Development/ros2` directory to the container and all files under this directory will automatically synced with the host. Therefore, your development files will persist even after the container is exited if you place your development files under the following directory:
 ```bash
 /home/$USER/Documents/ACC_Development/
                                 L ros2/
