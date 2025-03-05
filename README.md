@@ -6,6 +6,7 @@ This Github Repo will host all the competition resources you will need to succes
 
 - <strong> To get started with the competition please view the [Software_Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md) folder. </strong>
 - <strong> We want to make it very clear that the intended use case is using Ubuntu 24.04 and an Nvidia based graphics card for the competition. </strong>
+- Important updates have been made to the [ACC_Software_Instructions](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md). Please check them out to ensure any issues you are running into haven't been solved yet.
 - If you have any questions not answered in the [Discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab or the [Issues](https://github.com/quanser/ACC-Competition-2025/issues) tab, please email studentcompetition@quanser.com.
 
 ## Competition Overview 🪧
