@@ -129,10 +129,11 @@ colcon build
 ros2 launch qcar2_nodes qcar2_launch_virtual.py
 ```
 
-<strong>Development Note: </strong> When a docker container is exited, all the changes done inside the container will be lost. Starting the Development container (Isaac-ROS) links the `/home/$USER/Documents/ACC_Development/ros2` directory to the container and all files under this directory will automatically synced with the host. Therefore, your development files will persist even after the container is exited if you place your development files under the following directory:
+<strong>Development Note: </strong> When a docker container is exited, all the changes done inside the container will be lost. Starting the Development container (Isaac-ROS) links the `/home/$USER/Documents/ACC_Development/ros2` directory to the container and all files under this directory will automatically synced with the host. Therefore, your development files will persist even after the container is exited if you place your development files under the following directories:
 ```bash
 /home/$USER/Documents/ACC_Development/
                                 L ros2/
+                                    L <development_folder>/
                                     L src/
                                         L qcar2_interfaces/
                                         L qcar2_nodes/
