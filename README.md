@@ -42,7 +42,7 @@ We would also like you to post any issues with supplied resources if you find th
 - [Registration](https://forms.office.com/Pages/ResponsePage.aspx?id=Avj7Fe66dkyl9OR6d9iruwqgKheKAv1Bg6C4zWQQj3BUOFlBR0lITDA3VU9NN0VDUUtPNFBVUTgxVi4u)
 - [Quanser Interactive Labs Support Page](https://portal.quanser.com/Support)
 - [Quanser Interactive Labs Documentation](https://qlabs.quanserdocs.com/en/latest/ )
-- [Quanser Python API Documentation](https://qlabs.quanserdocs.com/en/latest/ )
+- [Quanser Python API Documentation](https://docs.quanser.com/quarc/documentation/python/index.html)
 - [Quanser C API Documentation](https://docs.quanser.com/quarc/documentation/hardware_reference_c.html)
 - [Quanser QUARC Blocks for MALTAB/Simulink Documentation](https://docs.quanser.com/quarc/documentation/quarc_block_categories.html)
 
