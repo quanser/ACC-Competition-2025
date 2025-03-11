@@ -28,7 +28,7 @@ Setting up the software environment:
 How your system should look like: 
 ``` bash 
 /home/$USER/Documents/ACC_Development/ 
-                        L ros2/
+                        L Development/
                         L isaac_ros_common/
                         L docker/
                         L dev/
