@@ -39,3 +39,15 @@ docker pull quanser/acc2025-virtual-qcar2:latest
 ## QCar 2 won't spawn in the open plane
 This was previously caused by an error on the back-end of QLabs. This has since been fixed, but if you are still experiencing this issue it may be because your QLabs has cached your current session.
 Please try logging out and logging back in to fix the issue. If it persists please raise an issue in the [issue tab](https://github.com/quanser/ACC-Competition-2025/issues).
+
+## Hardware requirements and performance expectations
+The development team has been testing the resources on an 4060 GPU, i7-12700KF, and 32GB of RAM. The performance that we receive is ~120fps and ~13cps when limiting the framerate to 200fps in the advanced graphics settings. 
+
+To see the performance of your machine do the following:
+- In the main page of QLabs click on settings
+- Turn on 'show advanced options':
+![Turning on Advanced Settings](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/TurnOnAdvancedOptions.png)
+
+- Navigate to the Plane world in QLabs
+- Turn on 'show comms per second' and 'show frames per second' in the settings:
+![Turning on CPS and FPS](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/TurnOnCPSnFPS.png)
