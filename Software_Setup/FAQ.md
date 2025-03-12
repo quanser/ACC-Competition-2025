@@ -6,7 +6,6 @@ This FAQ is for questions that require a more detailed response and might be rel
 - [QCar 2 won't spawn in the open plane](#qcar-2-wont-spawn-in-the-open-plane)
 - [Hardware requirements and performance expectations](#hardware-requirements-and-performance-expectations)
 
-
 ## How can I reset the entire setup of my resources?
 
 This is an important troubleshooting step since changes are constantly being made to the resources to fix different issues. Always try this as a first step if you are experiencing issues with the installation instructions
