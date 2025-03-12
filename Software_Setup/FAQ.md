@@ -16,30 +16,40 @@ Please do the following:
 - Download the latest [ACC Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z)
 - Unzip the folder
 - Run the setup_linux.py file
-```
+
+```bash
 python3 setup_linux.py
 ```
+
 - Run the following command to <strong>uninstall</strong> all resources:
-```
+
+```bash
 sudo apt purge --auto-remove qlabs-unreal quanser-sdk quarc-runtime
 ```
+
 - Run the following commands to <strong>reinstall</strong> all resources:
-```
+
+```bash
 wget --no-cache https://repo.quanser.com/debian/prerelease/config/configure_repo_prerelease.sh
 chmod u+x configure_repo_prerelease.sh
 ./configure_repo_prerelease.sh
 rm -f ./configure_repo_prerelease.sh
 ```
-```
+
+```bash
 sudo apt update
 ```
-```
+
+```bash
 sudo apt-get install qlabs-unreal python3-quanser-apis  quarc-runtime
 ```
+
 - Update the Docker container:
-```
+
+```bash
 docker pull quanser/acc2025-virtual-qcar2:latest
 ```
+
 Once you do this, try running the containers again and the nodes.
 
 
@@ -51,6 +61,7 @@ Please try logging out and logging back in to fix the issue. If it persists plea
 The development team has been testing the resources on an 4060 GPU, i7-12700KF, and 32GB of RAM. The performance that we receive is ~120fps and ~13cps when limiting the framerate to 200fps in the advanced graphics settings. These results were obtained when running all ROS2 nodes and spawning the QCar 2 in the Plane world.
 
 To see the performance of your machine do the following:
+
 - In the main page of QLabs click on settings
 - Turn on 'show advanced options':
 ![Turning on Advanced Settings](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/TurnOnAdvancedOptions.png)
