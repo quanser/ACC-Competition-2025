@@ -26,6 +26,13 @@ More details will be released about stages 2 and 3 in a subsequent handbook.
 
 Please review the Software_Setup section for understanding how python and ROS are meant to be utilized. 
 
+## ❓ FAQ ❓
+This FAQ is for questions that require a more detailed response and might be relevant to everyone. Also check the [open](https://github.com/quanser/ACC-Competition-2025/issues) and [closed](https://github.com/quanser/ACC-Competition-2025/issues?q=is%3Aissue%20state%3Aclosed) issues to see if your specific problem has been addressed.
+
+- [How can I reset the entire setup of my resources?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
+- [QCar 2 won't spawn in the open plane](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
+- [Hardware requirements and performance expectations](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#hardware-requirements-and-performance-expectations)
+
 ## Discussions 📣
 
 Teams may discuss amongst each other in the [discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab of the Github. 
