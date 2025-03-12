@@ -112,7 +112,7 @@ python3 Base_Scenarios_Python/Setup_Competition_Map.py
 
 Once everything has run to completion, the QLabs world should look like the following:
 
-![QLabs after running Setup_Competition_Map.py](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/HowToStart.png "QLabs after running Setup_Competition_Map.py")
+![QLabs after running Setup_Competition_Map.py](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/HowToStart.png)
 
 4. If you do not have a Development Docker (Isaac-ROS) container open, follow the above section to open one. The following commands should be run in the Development container.
 
