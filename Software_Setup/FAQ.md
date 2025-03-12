@@ -21,9 +21,9 @@ sudo apt purge --auto-remove qlabs-unreal quanser-sdk quarc-runtime
 ```
 - Run the following commands to <strong>reinstall</strong> all resources:
 ```
-wget --no-cache https://repo.quanser.com/debian/prerelease/config/configure_repo_prerelease.sh | \
-chmod u+x configure_repo_prerelease.sh | \
-./configure_repo_prerelease.sh | \
+wget --no-cache https://repo.quanser.com/debian/prerelease/config/configure_repo_prerelease.sh
+chmod u+x configure_repo_prerelease.sh
+./configure_repo_prerelease.sh
 rm -f ./configure_repo_prerelease.sh
 ```
 ```
