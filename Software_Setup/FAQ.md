@@ -1,10 +1,11 @@
-# ❓FAQ ❓
+# ❓FAQ ❓ <!-- omit in toc -->
 
 This FAQ is for questions that require a more detailed response and might be relevant to everyone. Also check the [open](https://github.com/quanser/ACC-Competition-2025/issues) and [closed](https://github.com/quanser/ACC-Competition-2025/issues?q=is%3Aissue%20state%3Aclosed) issues to see if your specific problem has been addressed.
 
-- [How can I reset the entire setup of my resources?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
-- [QCar 2 won't spawn in the open plane](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
-- [Hardware requirements and performance expectations](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#hardware-requirements-and-performance-expectations)
+- [How can I reset the entire setup of my resources?](#how-can-i-reset-the-entire-setup-of-my-resources)
+- [QCar 2 won't spawn in the open plane](#qcar-2-wont-spawn-in-the-open-plane)
+- [Hardware requirements and performance expectations](#hardware-requirements-and-performance-expectations)
+
 
 ## How can I reset the entire setup of my resources?
 
@@ -21,13 +22,13 @@ Please do the following:
 python3 setup_linux.py
 ```
 
-- Run the following command to <strong>uninstall</strong> all resources:
+- Run the following command to **uninstall** all resources:
 
 ```bash
 sudo apt purge --auto-remove qlabs-unreal quanser-sdk quarc-runtime
 ```
 
-- Run the following commands to <strong>reinstall</strong> all resources:
+- Run the following commands to **reinstall** all resources:
 
 ```bash
 wget --no-cache https://repo.quanser.com/debian/prerelease/config/configure_repo_prerelease.sh
@@ -54,10 +55,12 @@ Once you do this, try running the containers again and the nodes.
 
 
 ## QCar 2 won't spawn in the open plane
+
 This was previously caused by an error on the back-end of QLabs. This has since been fixed, but if you are still experiencing this issue it may be because your QLabs has cached your current session.
 Please try logging out and logging back in to fix the issue. If it persists please raise an issue in the [issue tab](https://github.com/quanser/ACC-Competition-2025/issues).
 
 ## Hardware requirements and performance expectations
+
 The development team has been testing the resources on an 4060 GPU, i7-12700KF, and 32GB of RAM. The performance that we receive is ~120fps and ~13cps when limiting the framerate to 200fps in the advanced graphics settings. These results were obtained when running all ROS2 nodes and spawning the QCar 2 in the Plane world.
 
 To see the performance of your machine do the following:

@@ -42,7 +42,7 @@ How your system should look like:
 
 The purpose of this docker container is to ensure safe setup of the Quanser Interactive Labs virtual environment.
 
-<strong> To pull the most recent version of the Docker container (after you go through the below steps first) from Dockerhub use the following command: </strong>
+**To pull the most recent version of the Docker container (after you go through the below steps first) from Dockerhub use the following command:**
 
 ```bash
 docker pull quanser/acc2025-virtual-qcar2:latest
@@ -85,14 +85,14 @@ This docker container will include the following setup scripts:
                         L Base_Scenarios_Python/
 ```
 
-5. <strong> To open additional terminals attached to the docker container </strong>, run step 4 again in a new terminal.
+1. **To open additional terminals attached to the docker container**, run step 4 again in a new terminal.
 
-## Development Container Setup:
+## Development Container Setup
 
 For software development we will leverage the isaac_ros docker container. This container can be used for:
 
 - Python only work (Not using ROS)
-- ROS focused solutions (Using either python/C++ to write ROS nodes) 
+- ROS focused solutions (Using either python/C++ to write ROS nodes)
 
 1. To get started please install [Nvidia-Container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
 
@@ -108,11 +108,11 @@ cd /home/$USER/Documents/ACC_Development/isaac_ros_common
 
 ```
 ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development
-``` 
+```
 
-**_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added. 
+**_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.
 
-4. <strong> To open additional terminals attached to the Development docker container </strong>, run steps 2 and 3 again in a new terminal.
+1. **To open additional terminals attached to the Development docker container**, run steps 2 and 3 again in a new terminal.
 
 ## How to Run the ROS2 Humble Nodes
 
@@ -158,7 +158,7 @@ colcon build
 ros2 launch qcar2_nodes qcar2_virtual_launch.py
 ```
 
-<strong> Development Note: </strong> When a docker container is exited, all the changes done inside the container will be lost. Starting the Development container (Isaac-ROS) using the command `./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development` links the `/home/$USER/Documents/ACC_Development/Development` directory to the container and all files under this directory will automatically synced with the host. Therefore, your development files will persist even after the container is exited if you place your files in that directory. We recommend you create a `<ros_packages_go_here>` directory as shown below and develop your ROS packages in that directory:
+**Development Note:** When a docker container is exited, all the changes done inside the container will be lost. Starting the Development container (Isaac-ROS) using the command `./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development` links the `/home/$USER/Documents/ACC_Development/Development` directory to the container and all files under this directory will automatically synced with the host. Therefore, your development files will persist even after the container is exited if you place your files in that directory. We recommend you create a `<ros_packages_go_here>` directory as shown below and develop your ROS packages in that directory:
 
 ```bash
 /home/$USER/Documents/ACC_Development/Development/
@@ -177,14 +177,13 @@ If you do not plan on using ROS, we recommend you create the `<non_ros_developme
                                               L <non_ros_development>/
 ```
 
-
 ## How to stop the RT Model
 
 When the Setup_Competition_Map.py file gets run (or any other base scenario file provided), a real-time application (RT Model) is deployed that communicates with the virtual QCar 2. This RT Model is what the QCar2 ROS nodes communicate with. It is important to gracefully stop this model once you are no longer using your current workspace. Run the following commands to stop the RT Model:
 
 1. Using the Quanser Virtual Environment Docker container, navigate to the following directory:
 
-```
+```bash
 cd /home/qcar2_scripts/python
 ```
 
