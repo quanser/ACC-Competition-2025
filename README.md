@@ -4,6 +4,7 @@ This Github Repo will host all the competition resources you will need to succes
 
 ## ❗ Announcements 🎤
 
+- There is a new [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md) to help address common issues.
 - <strong> To get started with the competition please view the [Software_Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md) folder. </strong>
 - <strong> We want to make it very clear that the intended use case is using Ubuntu 24.04, ROS2 Humble and an Nvidia based graphics card for the competition. </strong>
 - Important updates have been made to the [ACC_Software_Instructions](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md). Please check them out to ensure any issues you are running into haven't been solved yet.
@@ -25,6 +26,13 @@ More details will be released about stages 2 and 3 in a subsequent handbook.
 
 Please review the Software_Setup section for understanding how python and ROS are meant to be utilized. 
 
+## ❓ FAQ ❓
+This FAQ is for questions that require a more detailed response and might be relevant to everyone. Also check the [open](https://github.com/quanser/ACC-Competition-2025/issues) and [closed](https://github.com/quanser/ACC-Competition-2025/issues?q=is%3Aissue%20state%3Aclosed) issues to see if your specific problem has been addressed.
+
+- [How can I reset the entire setup of my resources?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
+- [QCar 2 won't spawn in the open plane](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
+- [Hardware requirements and performance expectations](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#hardware-requirements-and-performance-expectations)
+
 ## Discussions 📣
 
 Teams may discuss amongst each other in the [discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab of the Github. 
@@ -33,6 +41,7 @@ We would also like you to post any issues with supplied resources if you find th
 
 
 ## Resources 🗄️
+- [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md)
 - [How to setup my Linux machine](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md)
 - [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook)
 - [Competition Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z)

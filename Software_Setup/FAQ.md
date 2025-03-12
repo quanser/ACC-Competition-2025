@@ -1,6 +1,10 @@
 # ❓FAQ ❓
 
-This FAQ is for questions that require a more detailed response and might be relevant to everyone.
+This FAQ is for questions that require a more detailed response and might be relevant to everyone. Also check the [open](https://github.com/quanser/ACC-Competition-2025/issues) and [closed](https://github.com/quanser/ACC-Competition-2025/issues?q=is%3Aissue%20state%3Aclosed) issues to see if your specific problem has been addressed.
+
+- [How can I reset the entire setup of my resources?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
+- [QCar 2 won't spawn in the open plane](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
+- [Hardware requirements and performance expectations](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#hardware-requirements-and-performance-expectations)
 
 ## How can I reset the entire setup of my resources?
 
@@ -36,12 +40,15 @@ sudo apt-get install qlabs-unreal python3-quanser-apis  quarc-runtime
 ```
 docker pull quanser/acc2025-virtual-qcar2:latest
 ```
+Once you do this, try running the containers again and the nodes.
+
+
 ## QCar 2 won't spawn in the open plane
 This was previously caused by an error on the back-end of QLabs. This has since been fixed, but if you are still experiencing this issue it may be because your QLabs has cached your current session.
 Please try logging out and logging back in to fix the issue. If it persists please raise an issue in the [issue tab](https://github.com/quanser/ACC-Competition-2025/issues).
 
 ## Hardware requirements and performance expectations
-The development team has been testing the resources on an 4060 GPU, i7-12700KF, and 32GB of RAM. The performance that we receive is ~120fps and ~13cps when limiting the framerate to 200fps in the advanced graphics settings. 
+The development team has been testing the resources on an 4060 GPU, i7-12700KF, and 32GB of RAM. The performance that we receive is ~120fps and ~13cps when limiting the framerate to 200fps in the advanced graphics settings. These results were obtained when running all ROS2 nodes and spawning the QCar 2 in the Plane world.
 
 To see the performance of your machine do the following:
 - In the main page of QLabs click on settings
