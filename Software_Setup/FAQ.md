@@ -1,6 +1,6 @@
 # ❓FAQ ❓
 
-This FAQ is for questions that require a more detailed response and might be relevant to everyone. 
+This FAQ is for questions that require a more detailed response and might be relevant to everyone. Also check the [open](https://github.com/quanser/ACC-Competition-2025/issues) and [closed](https://github.com/quanser/ACC-Competition-2025/issues?q=is%3Aissue%20state%3Aclosed) issues to see if your specific problem has been addressed.
 
 - [How can I reset the entire setup of my resources?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
 - [QCar 2 won't spawn in the open plane](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
