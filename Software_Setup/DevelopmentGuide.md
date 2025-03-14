@@ -33,27 +33,15 @@ If you do not plan on using ROS, we recommend you create the `<non_ros_developme
 
 ## How to add Python packages via `pip3` that persist
 
-Any packages that get installed via `pip3` in the command line of the Development Container do not persist once the container is closed. When you are installing packages in the terminal make sure to edit the Docker file called **Dockerfile.quanser**. This Docker file is used to configure the Development container and can be found in the following folder:
+Any packages that get installed via `pip3` in the command line of the Development Container do not persist once the container is closed. When you are installing packages in the terminal make sure to edit the Docker file called **`Dockerfile.quanser`**. This Docker file is used to configure the Development container and can be found in the following folder:
 
 ```bash
 cd /home/$USER/Documents/ACC_Development/docker
 ```
 
-At the bottom of the `# Install system libraries that quanser-sdk depends on` comment, begin installing your Python packages as shown below:
+At the bottom of the `Dockerfile.quanser` add your Python packages as shown below:
 
 ```bash
-# Install system libraries that quanser-sdk depends on
-RUN apt-get update && apt-get install -y \
-    libasound2-dev \
-    libsndfile1-dev \
-    libavcodec-dev \
-    libavformat-dev \
-    libglib2.0-dev \
-    libfreenect-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN cp /usr/local/bin/pip3.8 /usr/bin/
-
 # Install Python Packages if necessary
 RUN pip3 install -U \
     pytransform3d \
