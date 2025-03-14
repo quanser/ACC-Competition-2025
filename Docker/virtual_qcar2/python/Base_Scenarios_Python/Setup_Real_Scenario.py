@@ -181,6 +181,17 @@ def setup(qlabs, initialPosition = [-1.205, -0.83, 0.005], initialOrientation = 
                             rotation=[0, 0, 35], 
                             scale=[0.1, 0.1, 0.1], 
                             waitForConfirmation=False)  
+    
+    #x+ side
+    myStopSign.spawn_degrees (location=[2.410, 0.206, 0.006], 
+                            rotation=[0, 0, -90], 
+                            scale=[0.1, 0.1, 0.1], 
+                            waitForConfirmation=False)  
+    
+    myStopSign.spawn_degrees (location=[1.766, 1.697, 0.006], 
+                            rotation=[0, 0, 90], 
+                            scale=[0.1, 0.1, 0.1], 
+                            waitForConfirmation=False)  
 
     #roundabout signs
     myRoundaboutSign = QLabsRoundaboutSign(qlabs)
@@ -204,12 +215,6 @@ def setup(qlabs, initialPosition = [-1.205, -0.83, 0.005], initialOrientation = 
     #one way exit yield
     myYieldSign = QLabsYieldSign(qlabs)
     myYieldSign.spawn_degrees(location= [0.0, -1.3, 0.006],
-                              rotation=[0, 0, -180],
-                              scale= [0.1, 0.1, 0.1],
-                              waitForConfirmation=False)
-    
-    #x+ side yield
-    myYieldSign.spawn_degrees(location= [1.345, 0.616, 0.006],
                               rotation=[0, 0, -180],
                               scale= [0.1, 0.1, 0.1],
                               waitForConfirmation=False)
