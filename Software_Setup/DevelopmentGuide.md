@@ -1,4 +1,4 @@
-# Development Guide for the Development Container
+# Development Guide for the Development Container <!-- omit in toc -->
 
 This guide will provide instructions and tips for developing your self-driving algorithm in the Isaac-ROS Development Container.
 
@@ -6,9 +6,8 @@ Developing in a Docker container can be tricky since everytime the container is 
 
 The topics are listed below and will be updated with new information periodically:
 
-- [Development Guide for the Development Container](#development-guide-for-the-development-container)
-  - [How to create files that persist in the container](#how-to-create-files-that-persist-in-the-container)
-  - [How to add Python packages via `pip3` that persist](#how-to-add-python-packages-via-pip3-that-persist)
+- [How to create files that persist in the container](#how-to-create-files-that-persist-in-the-container)
+- [How to add Python packages via `pip3` that persist](#how-to-add-python-packages-via-pip3-that-persist)
 
 
 ## How to create files that persist in the container
