@@ -6,6 +6,11 @@ Developing in a Docker container can be tricky since everytime the container is 
 
 The topics are listed below and will be updated with new information periodically:
 
+- [Development Guide for the Development Container](#development-guide-for-the-development-container)
+  - [How to create files that persist in the container](#how-to-create-files-that-persist-in-the-container)
+  - [How to add Python packages via `pip3` that persist](#how-to-add-python-packages-via-pip3-that-persist)
+
+
 ## How to create files that persist in the container
 
 When a docker container is exited, all the changes done inside the container will be lost. Starting the Development container (Isaac-ROS) using the command `./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development` links the `/home/$USER/Documents/ACC_Development/Development` directory to the container and all files under this directory will automatically synced with the host. Therefore, your development files will persist even after the container is exited if you place your files in that directory. We recommend you create a `<ros_packages_go_here>` directory as shown below and develop your ROS packages in that directory:
