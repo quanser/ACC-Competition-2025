@@ -4,6 +4,8 @@ This Github Repo will host all the competition resources you will need to succes
 
 ## ❗ Announcements 🎤
 
+- There is a new [Development Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/DevelopmentGuide.md) to help understand how to develop in this Docker environment.
+- There is a new [Detailed Scenario](https://github.com/quanser/ACC-Competition-2025/blob/main/Detailed_Scenario.md) to help provide a target for your algorithms.
 - There is a new [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/FAQ.md) to help address common issues.
 - **To get started with the competition please view the [Software_Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md) folder.**
 - **We want to make it very clear that the intended use case is using Ubuntu 24.04, ROS2 Humble and an Nvidia based graphics card for the competition.**
