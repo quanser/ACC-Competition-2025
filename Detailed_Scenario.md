@@ -2,7 +2,7 @@
 
 Since the definitition of the video submission has been vague, the development team wanted to provide the teams with a clear objective to shoot for and surpass. This objective is represented in [this video](https://youtu.be/NtgBwlfGbMc).
 
-Below is a step-by-step sequence of events that are representative of what will be tested during Stages 2 and 3 of the competition. It is still expected that teams communicate important aspects of their algorithm throughout their video video.
+Below is a step-by-step sequence of events that are representative of what will be tested during Stages 2 and 3 of the competition. It is still expected that teams communicate important aspects of their algorithm throughout their video submission.
 
 ## Scenario
 
@@ -14,14 +14,27 @@ Below is a step-by-step sequence of events that are representative of what will 
 
 ![Pick-Up coordinate](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/PickUpCoordinate.png)
 
-3. Pause for 3 seconds to indicate that a passenger is being picked up. To make it more obvious that you are picking up a passenger up we recommend that teams change the RGB LED strip on the QCar 2.
+3. Pause for 3 seconds to indicate that a passenger is being picked up. To make it more obvious that you are picking up a passenger, we recommend that teams change the RGB LED strip on the QCar 2.
 
 4. Navigate to the drop-off coordinate [-0.905, 0.800] (meters):
 
 ![Drop Off Coordinate](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/DropOffCoordinate.png)
 
-5. Pause for 3 seconds to indicate that a passenger is being dropped off. To make it more obvious that you are dropping off a passenger up we recommend that teams change the RGB LED strip on the QCar 2.
+5. Pause for 3 seconds to indicate that a passenger is being dropped off. To make it more obvious that you are dropping off a passenger, we recommend that teams change the RGB LED strip on the QCar 2.
 
 6. Navigate back to the Taxi Hub Area to await another ride.
 
 **END OF SCENARIO**
+
+## Expectatations
+
+When the judges are viewing the video submissions, they will be watching for the following, but not limited to:
+
+1. Cars crossing over lane lines.
+2. Cars not fully stopping at traffic controls.
+3. Timely reactions to traffic controls.
+4. Properly stopping to pick-up and drop-off passengers.
+5. Avoiding any obstacles.
+6. Moving as fast as possible (moving as fast as possible will be important for stage 2 and 3)
+
+It is important to keep in mind that this scenario only represents a single "ride". Stages 2 and 3 will require you to complete as many rides as possible in a certain time period.
