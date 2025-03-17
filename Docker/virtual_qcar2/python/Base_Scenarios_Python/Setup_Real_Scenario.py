@@ -17,7 +17,6 @@ from qvl.stop_sign import QLabsStopSign
 from qvl.yield_sign import QLabsYieldSign
 from qvl.roundabout_sign import QLabsRoundaboutSign
 from qvl.crosswalk import QLabsCrosswalk
-import pal.resources.rtmodels as rtmodels
 from qvl.traffic_light import QLabsTrafficLight
 
 def main():
@@ -286,16 +285,17 @@ def setup(qlabs, initialPosition = [-1.205, -0.83, 0.005], initialOrientation = 
                             scale=[0.38, 0.02, 0.001], 
                             waitForConfirmation=False)
 
-
+    # define rt model path
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace_studio'))
     # Start spawn model
-    QLabsRealTime().start_real_time_model(rtmodels.QCAR2_STUDIO)
+    QLabsRealTime().start_real_time_model(rtModel)
 
     return car2
 
 #function to terminate the real time model running
 def terminate():
-    QLabsRealTime().terminate_real_time_model(rtmodels.QCAR2_STUDIO)
-
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace_studio'))
+    QLabsRealTime().terminate_real_time_model(rtModel)
 if __name__ == '__main__':
     main()
 
