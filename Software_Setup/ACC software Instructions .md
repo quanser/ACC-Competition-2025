@@ -38,9 +38,9 @@ How your system should look like:
                         L backup/
 ```
 
-## Quanser Virtual Environment Container
+## Set Up the Quanser Virtual Environment Docker Container
 
-The purpose of this docker container is to ensure safe setup of the Quanser Interactive Labs virtual environment.
+The purpose of this docker container is to ensure safe setup of the Quanser Interactive Labs virtual environment. The below instructions go over how to set this Docker container up.
 
 **To pull the most recent version of the Docker container (after you go through the below steps first) from Dockerhub use the following command:**
 
@@ -50,69 +50,71 @@ docker pull quanser/acc2025-virtual-qcar2:latest
 
 1. Download the latest debian packages (only need to do once):
 
-``` bash
-wget --no-cache https://repo.quanser.com/debian/prerelease/config/configure_repo_prerelease.sh 
-chmod u+x configure_repo_prerelease.sh
-./configure_repo_prerelease.sh 
-rm -f ./configure_repo_prerelease.sh 
-sudo apt update 
-```
+    ``` bash
+    wget --no-cache https://repo.quanser.com/debian/prerelease/config/configure_repo_prerelease.sh 
+    chmod u+x configure_repo_prerelease.sh
+    ./configure_repo_prerelease.sh 
+    rm -f ./configure_repo_prerelease.sh 
+    sudo apt update 
+    ```
 
 2. Install QLabs, Quanser Python APIs, and QUARC runtime:
 
-```bash
-sudo apt-get install qlabs-unreal python3-quanser-apis  quarc-runtime
-```
+    ```bash
+    sudo apt-get install qlabs-unreal python3-quanser-apis  quarc-runtime
+    ```
 
 3. Register an account in the [Quanser Academic Portal](https://portal.quanser.com/Accounts/Register) to obtain access for Quanser Interactive Labs.
 
 4. To setup Quanser's custom python docker navigate to the folder:
 
-```bash
-cd /home/$USER/Documents/ACC_Development/docker/virtual_qcar2
-```
+    ```bash
+    cd /home/$USER/Documents/ACC_Development/docker/virtual_qcar2
+    ```
 
-And run the following command:
+    And run the following command:
 
-```bash
-sudo docker run --rm -it --network host --name virtual-qcar2 quanser/acc2025-virtual-qcar2 bash
-```
+    ```bash
+    sudo docker run --rm -it --network host --name virtual-qcar2 quanser/acc2025-virtual-qcar2 bash
+    ```
 
-This docker container will include the following setup scripts:
+    This docker container will include the following setup scripts:
 
- ```bash
-/home/qcar2_scripts/python 
-                        L Base_Scenarios_Python/
-```
+    ```bash
+    /home/qcar2_scripts/python 
+                            L Base_Scenarios_Python/
+    ```
 
-1. **To open additional terminals attached to the docker container**, run step 4 again in a new terminal.
+5. **To open additional terminals attached to the docker container**, run step 4 again in a new terminal.
 
-## Development Container Setup
+## Set Up the Development Docker Container
 
 For software development we will leverage the isaac_ros docker container. This container can be used for:
 
 - Python only work (Not using ROS)
 - ROS focused solutions (Using either python/C++ to write ROS nodes)
 
+The below instructions show you how to set up the Development Docker Container.
+
 1. To get started please install [Nvidia-Container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
 
-**_NOTE:_**  If you're not sure what method to use, scroll to the top of the page and follow the With apt: Ubuntu, Debian' section. You will not need to configure the repository to use experimental packages.
+    **_NOTE:_**  If you're not sure what method to use, scroll to the top of the page and follow the With apt: Ubuntu, Debian' section. You will not need to configure the repository to use experimental packages.
 
 2. you can find the content of the isaac_ros container by going to the following directory:
 
-```bash
-cd /home/$USER/Documents/ACC_Development/isaac_ros_common
-```
+    ```bash
+    cd /home/$USER/Documents/ACC_Development/isaac_ros_common
+    ```
 
 3. To start the container use the command
 
-```
-./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development
-```
+    ```bash
+    ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development
+    ```
 
-**_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.
+    **_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.
 
-1. **To open additional terminals attached to the Development docker container**, run steps 2 and 3 again in a new terminal.
+4. **To open additional terminals attached to the Development docker container**, run steps 2 and 3 again in a new terminal.
 
 ## How to Run the ROS2 Humble Nodes
 
@@ -124,15 +126,15 @@ Once you are ready to start developing, follow these steps to start the virtual 
 
 3. Using the Quanser Virtual Environment Docker container, navigate to the following directory:
 
-```bash
-cd /home/qcar2_scripts/python
-```
+    ```bash
+    cd /home/qcar2_scripts/python
+    ```
 
 4. Run the following Python script to spawn the competition map into QLabs:
 
-```bash
-python3 Base_Scenarios_Python/Setup_Competition_Map.py
-```
+    ```bash
+    python3 Base_Scenarios_Python/Setup_Competition_Map.py
+    ```
 
 Once everything has run to completion, the QLabs world should look like the following:
 
@@ -142,24 +144,23 @@ Once everything has run to completion, the QLabs world should look like the foll
 
 6. Compile the QCar2 ros nodes using:
 
-```bash
-colcon build
-```
+    ```bash
+    colcon build
+    ```
 
 6. Source the QCar2 packages using:
 
-```bash
-. install/setup.bash
-```
+    ```bash
+    . install/setup.bash
+    ```
 
 7. Launch the nodes for the QCar using the launch file configured for the virtual QCar:
 
-```bash
-ros2 launch qcar2_nodes qcar2_virtual_launch.py
-```
+    ```bash
+    ros2 launch qcar2_nodes qcar2_virtual_launch.py
+    ```
 
 **IMPORTANT:** For tips and guides on how to develop in this container, visit the DevelopmentGuide.md page.
-
 
 ## How to stop the RT Model
 
@@ -167,12 +168,12 @@ When the Setup_Competition_Map.py file gets run (or any other base scenario file
 
 1. Using the Quanser Virtual Environment Docker container, navigate to the following directory:
 
-```bash
-cd /home/qcar2_scripts/python
-```
+    ```bash
+    cd /home/qcar2_scripts/python
+    ```
 
 2. To stop the RT Model run the following command:
 
-```bash
-python3 qcar2_stop.py
-```
+    ```bash
+    python3 qcar2_stop.py
+    ```

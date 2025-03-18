@@ -6,9 +6,44 @@ Developing in a Docker container can be tricky since everytime the container is 
 
 The topics are listed below and will be updated with new information periodically:
 
+- [Structure of the development environment](#structure-of-the-development-environment)
+  - [Quanser Virtual Container](#quanser-virtual-container)
+  - [Development Container](#development-container)
 - [How to create files that persist in the container](#how-to-create-files-that-persist-in-the-container)
+- [How to add packages via `apt` that persist](#how-to-add-packages-via-apt-that-persist)
 - [How to add Python packages via `pip3` that persist](#how-to-add-python-packages-via-pip3-that-persist)
 
+## Structure of the development environment
+
+There are 3 components to the development environment that has been constructed for this competition:
+
+1. `Quanser Virtual Environment Container`: A Docker Container intended for running Python scripts that set up the QLabs world.
+2. `Development Container`: A Docker Container modified from the `isaac_ros` Nvidia container that contains Quanser's QCar 2 ROS2 nodes.
+3. `Quanser Interactive Labs`: An application that gets installed natively in Ubuntu 24.04. This application provides the simulation environment for the QCar 2 and the Quanser Virtual Environment Container connects to this application.
+
+![QLabsDevelopmentVennDiagram]()
+
+To set these 3 components up, you will need to follow the [ACC Software Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md) document.
+
+### Quanser Virtual Container
+
+This Docker Container comes preinstalled with a Python interpreter that can run the Base Scenarios. The Base Scenarios utilize the [`qvl` library](https://qlabs.quanserdocs.com/en/latest/Objects/index.html) that allows you to spawn "actors" into the QLabs environment. The  allows you to interface with QLabs to spawn in different actors. Using `qvl` you can develop your own custom scenarios to test your algorithm.
+
+Inside the Docker Container are 2 RT Models (Real-Time Model). When you run any of the Base Scenarios, an RT Model is run. The RT Model is what allows you to interface with the virtual QCar 2. It sends and receives information from a digital "hardware board" in QLabs.
+
+```bash
+/virtual_plants/rt_models/QCar2
+                            L QCar2_Workspace_studio.rt-linux_x86_64
+                            L QCar2_Workspace.rt-linux_x86_64
+```
+
+The studio RT Model is used if you spawn the QCar 2 at 1/10th scale as done in the Setup_Competition_Map.py script. The non-studio version is used if you spawn the Virtual QCar 2 in at full scale.
+
+### Development Container
+
+This Docker Container is modified from the Isaac-ROS Nvidia container. It comes preinstalled with ROS2 Humble and contains the nodes that are used to interface with the Virtual QCar2.
+
+The ROS2 Humble nodes interface with the QCar2 via the [Python API](https://docs.quanser.com/quarc/documentation/python/hardware/index.html).
 
 ## How to create files that persist in the container
 
@@ -31,9 +66,33 @@ If you do not plan on using ROS, we recommend you create the `<non_ros_developme
                                               L <non_ros_development>/
 ```
 
+## How to add packages via `apt` that persist
+
+Any packages that get installed via `apt` in the command line of the Development Container do not persist once the container is closed. When you are installing packages in teh terminal, make sure to edit the Docker file called **`Dockerfile.quanser`**. This Docker file is used to configure the Development container and can be found in the following folder:
+
+```bash
+cd /home/$USER/Documents/ACC_Development/docker
+```
+
+At the bottom of the `Dockerfile.quanser` add your Debian packages as shown below:
+
+```bash
+# Install Debian packages
+RUN apt-get update && apt-get install -y \
+    python3-transforms3d \
+    python3-pyqtgraph \
+    && rm -rf /var/lib/apt/lists/*
+```
+
+This example will install pytransform3d and pyqtgraph everytime the container is started. **As you develop in the Development Container**, make sure you record any packages installed via `apt` in the Docker file mentioned above.
+
+**IMPORTANT:** If you ever download the ACC_Resources.zip file and run the `setup_linux.py` file again, this will create a new ACC_Development folder and record a backup of your previous one. Make sure to copy any changes made to `Dockerfile.quanser` over to the new ACC_Development folder.
+
 ## How to add Python packages via `pip3` that persist
 
-Any packages that get installed via `pip3` in the command line of the Development Container do not persist once the container is closed. When you are installing packages in the terminal make sure to edit the Docker file called **`Dockerfile.quanser`**. This Docker file is used to configure the Development container and can be found in the following folder:
+**NOTE**: We recommend you use the Debian packages if they are available.
+
+Any packages that get installed via `pip3` in the command line of the Development Container do not persist once the container is closed. When you are installing packages in the terminal, make sure to edit the Docker file called **`Dockerfile.quanser`**. This Docker file is used to configure the Development container and can be found in the following folder:
 
 ```bash
 cd /home/$USER/Documents/ACC_Development/docker
