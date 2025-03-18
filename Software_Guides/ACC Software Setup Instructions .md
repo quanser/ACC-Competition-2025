@@ -160,7 +160,7 @@ Once everything has run to completion, the QLabs world should look like the foll
     ros2 launch qcar2_nodes qcar2_virtual_launch.py
     ```
 
-**IMPORTANT:** For tips and guides on how to develop in this container, visit the DevelopmentGuide.md page.
+**IMPORTANT:** For tips and guides on how to develop in this container, visit the [Devlopment Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md).
 
 ## How to stop the RT Model
 
