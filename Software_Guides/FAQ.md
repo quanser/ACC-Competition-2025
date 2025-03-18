@@ -52,11 +52,14 @@ docker pull quanser/acc2025-virtual-qcar2:latest
 
 Once you do this, try running the containers again and the nodes.
 
-
 ## QCar 2 won't spawn in the open plane
 
 This was previously caused by an error on the back-end of QLabs. This has since been fixed, but if you are still experiencing this issue it may be because your QLabs has cached your current session.
-Please try logging out and logging back in to fix the issue. If it persists please raise an issue in the [issue tab](https://github.com/quanser/ACC-Competition-2025/issues).
+Please try logging out and logging back in to fix the issue.
+
+This can be caused by you not being logged in with the email address you used to register for the competition. Please talk to your team captain about which email address they submitted to the competition.
+
+If it persists please raise an issue in the [issue tab](https://github.com/quanser/ACC-Competition-2025/issues).
 
 ## Hardware requirements and performance expectations
 
