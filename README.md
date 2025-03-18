@@ -27,7 +27,9 @@ All registrants will gain access to the Stage 1 virtual design phase, where a te
 In stage 2, the selected teams will receive a physical QCar 2 from Quanser and implement their Self-Driving algorithms on the  QCar2. They will then be required to bring their QCar 2 to the competition venue and compete live against other selected teams.
 More details will be released about stages 2 and 3 in a subsequent handbook.
 
-Please review the Software_Guides section for understanding how python and ROS are meant to be utilized.
+Stage 1 will have a **video submission** and the criteria that will be considered is laid out in the [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook).
+
+To begin with the competition using ROS and Linux follow the [Software_Guides](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions%20.md).
 
 ## ❓ FAQ ❓
 
