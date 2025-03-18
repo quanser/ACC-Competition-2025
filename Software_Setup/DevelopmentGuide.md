@@ -43,7 +43,7 @@ The studio RT Model is used if you spawn the QCar 2 at 1/10th scale as done in t
 
 This Docker Container is modified from the Isaac-ROS Nvidia container. It comes preinstalled with ROS2 Humble and contains the nodes that are used to interface with the Virtual QCar2.
 
-The ROS2 Humble nodes interface with the QCar2 via the [Python API](https://docs.quanser.com/quarc/documentation/python/hardware/index.html).
+The ROS2 Humble nodes interface with the QCar2 via the [C API](https://docs.quanser.com/quarc/documentation/hardware_functions_alphabetical_list_c.html).
 
 ## How to create files that persist in the container
 
