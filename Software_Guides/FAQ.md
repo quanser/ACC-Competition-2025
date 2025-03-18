@@ -66,8 +66,8 @@ To see the performance of your machine do the following:
 
 - In the main page of QLabs click on settings
 - Turn on 'show advanced options':
-![Turning on Advanced Settings](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/TurnOnAdvancedOptions.png)
+![Turning on Advanced Settings](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/TurnOnAdvancedOptions.png)
 
 - Navigate to the Plane world in QLabs
 - Turn on 'show comms per second' and 'show frames per second' in the settings:
-![Turning on CPS and FPS](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/TurnOnCPSnFPS.png)
+![Turning on CPS and FPS](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/TurnOnCPSnFPS.png)

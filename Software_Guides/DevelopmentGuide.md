@@ -21,9 +21,9 @@ There are 3 components to the development environment that has been constructed 
 2. `Development Container`: A Docker Container modified from the `isaac_ros` Nvidia container that contains Quanser's QCar 2 ROS2 nodes.
 3. `Quanser Interactive Labs`: An application that gets installed natively in Ubuntu 24.04. This application provides the simulation environment for the QCar 2 and the Quanser Virtual Environment Container connects to this application.
 
-![QLabsDevelopmentVennDiagram](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/DevelopmentVennDiagram.png)
+![QLabsDevelopmentVennDiagram](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/DevelopmentVennDiagram.png)
 
-To set these 3 components up, you will need to follow the [ACC Software Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md) document.
+To set these 3 components up, you will need to follow the [ACC Software Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20software%20Instructions%20.md) document.
 
 ### Quanser Virtual Container
 
@@ -37,7 +37,7 @@ Inside the Docker Container are 2 RT Models (Real-Time Model). When you run any 
                             L QCar2_Workspace.rt-linux_x86_64
 ```
 
-The studio RT Model is used if you spawn the QCar 2 at 1/10th scale as done in the Setup_Competition_Map.py script. The non-studio version is used if you spawn the Virtual QCar 2 in at full scale.
+The studio RT Model is used if you spawn the QCar 2 at 1/10th scale, as done in the Setup_Competition_Map.py script. The non-studio version is used if you spawn the Virtual QCar 2 in at full scale, as done in the Setup_Base_Scenario_stop_ACC_Competition_2025.py script.
 
 ### Development Container
 
