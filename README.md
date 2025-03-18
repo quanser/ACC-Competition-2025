@@ -4,7 +4,7 @@ This Github Repo will host all the competition resources you will need to succes
 
 ## ❗ Announcements 🎤
 
-- There is a new [Development Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/DevelopmentGuide.md) to help understand how to develop in this Docker environment.
+- There is a new [Development Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md) to help understand how to develop in this Docker environment.
 - There is a new [Detailed Scenario](https://github.com/quanser/ACC-Competition-2025/blob/main/Detailed_Scenario.md) to help provide a target for your algorithms.
 - There is a new [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md) to help address common issues.
 - **To get started with the competition please view the [Software_Guides](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions%20.md) folder.**
@@ -46,6 +46,8 @@ We would also like you to post any issues with supplied resources if you find th
 ## Resources 🗄️
 
 - [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md)
+- [Detailed Scenario](https://github.com/quanser/ACC-Competition-2025/blob/main/Detailed_Scenario.md)
+- [Development Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md)
 - [How to setup my Linux machine](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions%20.md)
 - [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook)
 - [Competition Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z)
