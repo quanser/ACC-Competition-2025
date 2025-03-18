@@ -21,7 +21,7 @@ There are 3 components to the development environment that has been constructed 
 2. `Development Container`: A Docker Container modified from the `isaac_ros` Nvidia container that contains Quanser's QCar 2 ROS2 nodes.
 3. `Quanser Interactive Labs`: An application that gets installed natively in Ubuntu 24.04. This application provides the simulation environment for the QCar 2 and the Quanser Virtual Environment Container connects to this application.
 
-![QLabsDevelopmentVennDiagram]()
+![QLabsDevelopmentVennDiagram](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/Pictures/DevelopmentVennDiagram.png)
 
 To set these 3 components up, you will need to follow the [ACC Software Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Setup/ACC%20software%20Instructions%20.md) document.
 
