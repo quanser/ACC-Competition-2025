@@ -114,7 +114,11 @@ The below instructions show you how to set up the Development Docker Container.
 
     **_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.
 
-4. **To open additional terminals attached to the Development docker container**, run steps 2 and 3 again in a new terminal.
+4. **To open additional terminals attached to the Development docker container**, run the following command:
+
+    ```bash
+    docker exec -it virtual-qcar2 bash
+    ```
 
 ## How to Run the ROS2 Humble Nodes
 
