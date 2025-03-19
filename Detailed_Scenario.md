@@ -16,6 +16,14 @@ Below is a step-by-step sequence of events that are representative of what will 
 
 3. Pause for 3 seconds to indicate that a passenger is being picked up. To make it more obvious that you are picking up a passenger, we recommend that teams change the RGB LED strip on the QCar 2.
 
+**CHANGING LEDS**: The command for setting LEDs is below:
+
+```bash
+ros2 param set qcar2_hardware led_color_id <value>
+```
+
+They are formatted as `0: red , 1: green, 2: blue, 3: yellow , 4: cyan , 5: magenta`.
+
 4. Navigate to the drop-off coordinate [-0.905, 0.800] (meters):
 
 ![Drop Off Coordinate](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/DropOffCoordinate.png)
