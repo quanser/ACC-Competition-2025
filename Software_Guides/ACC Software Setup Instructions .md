@@ -85,7 +85,11 @@ docker pull quanser/acc2025-virtual-qcar2:latest
                             L Base_Scenarios_Python/
     ```
 
-5. **To open additional terminals attached to the docker container**, run step 4 again in a new terminal.
+5. **To open additional terminals attached to the docker container**, run the following command in a new terminal:
+
+    ```bash
+    docker exec -it virtual-qcar2 bash
+    ```
 
 ## Set Up the Development Docker Container
 
@@ -114,11 +118,7 @@ The below instructions show you how to set up the Development Docker Container.
 
     **_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.
 
-4. **To open additional terminals attached to the Development docker container**, run the following command:
-
-    ```bash
-    docker exec -it virtual-qcar2 bash
-    ```
+4. **To open additional terminals attached to the Development docker container**, open a new terminal and run Steps 2 & 3 again.
 
 ## How to Run the ROS2 Humble Nodes
 
