@@ -38,6 +38,8 @@ This FAQ is for questions that require a more detailed response and might be rel
 - [How can I reset the entire setup of my resources?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
 - [QCar 2 won't spawn in the open plane](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
 - [Hardware requirements and performance expectations](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#hardware-requirements-and-performance-expectations)
+- [What are my camera intrinsics?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#what-are-my-camera-intrinsics)
+- [What are the transformation matrices between the different sensors?](http://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#what-are-the-transformation-matrices-between-the-different-sensors)
 
 ## Discussions 📣
 
