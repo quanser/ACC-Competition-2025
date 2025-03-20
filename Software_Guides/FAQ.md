@@ -63,7 +63,7 @@ If it persists please raise an issue in the [issue tab](https://github.com/quans
 
 ## Hardware requirements and performance expectations
 
-The development team has been testing the resources on an 4060 GPU, i7-12700KF, and 32GB of RAM. The performance that we receive is ~120fps and ~13cps when limiting the framerate to 200fps in the advanced graphics settings. These results were obtained when running all ROS2 nodes and spawning the QCar 2 in the Plane world.
+The development team has been testing the resources on an RTX 2060 Max-Q GPU, i9-10980HK, and 32GB of RAM. The performance that we receive is ~120fps and ~13cps when limiting the framerate to 200fps in the advanced graphics settings. These results were obtained when running all ROS2 nodes and spawning the QCar 2 in the Plane world.
 
 To see the performance of your machine do the following:
 

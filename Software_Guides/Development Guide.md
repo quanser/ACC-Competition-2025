@@ -12,6 +12,7 @@ The topics are listed below and will be updated with new information periodicall
 - [How to create files that persist in the container](#how-to-create-files-that-persist-in-the-container)
 - [How to add packages via `apt` that persist](#how-to-add-packages-via-apt-that-persist)
 - [How to add Python packages via `pip3` that persist](#how-to-add-python-packages-via-pip3-that-persist)
+- [How to stop the RT Model](#how-to-stop-the-rt-model)
 
 ## Structure of the development environment
 
@@ -110,3 +111,19 @@ RUN pip3 install -U \
 This example will install pytransform3d and pyqtgraph everytime the container is started. **As you develop in the Development Container**, make sure you record any packages installed via `pip3` in the Docker file mentioned above.
 
 **IMPORTANT:** If you ever download the ACC_Resources.zip file and run the `setup_linux.py` file again, this will create a new ACC_Development folder and record a backup of your previous one. Make sure to copy any changes made to `Dockerfile.quanser` over to the new ACC_Development folder.
+
+## How to stop the RT Model
+
+When the Setup_Competition_Map.py file gets run (or any other base scenario file provided), a real-time application (RT Model) is deployed that communicates with the virtual QCar 2. This RT Model is what the QCar2 ROS nodes communicate with. It is important to gracefully stop this model once you are no longer using your current workspace. Run the following commands to stop the RT Model:
+
+1. Using the Quanser Virtual Environment Docker container, navigate to the following directory:
+
+    ```bash
+    cd /home/qcar2_scripts/python
+    ```
+
+2. To stop the RT Model run the following command:
+
+    ```bash
+    python3 qcar2_stop.py
+    ```

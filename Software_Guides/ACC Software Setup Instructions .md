@@ -6,10 +6,13 @@ Welcome to the ACC Quanser Self-Driving Car Student Competition - software setup
 In this document we will describe:
 
 - System requirements for the virtual portion of the ACC competition
-- How to setup your system before starting the competition
-- Considerations while doing software development
+- How to setup the development environment
 
-## Prerequisites
+By the end of this document, you will have a Quanser Virtual Environment Docker Container that can be used to spawn the QCar 2 in QLabs. You will have a Development Docker Container where you will develop your code and run the ROS2 nodes. And, you will have QLabs installed. The configuration will look like this:
+
+![QLabsDevelopmentVennDiagram](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/DevelopmentVennDiagram.png)
+
+## System Requirements
 
 Linux System base requirements:
 
@@ -19,7 +22,7 @@ Linux System base requirements:
 Please follow this guide to correctly setup Docker engine on your ground station PC: \
 [Docker Installation Instructions](https://docs.docker.com/engine/install/ubuntu/)
 
-Setting up the software environment:
+Download and set up the ACC Resources:
 
 1. Download the ACC resources available from Quanser [ACC Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z).
 
@@ -165,19 +168,3 @@ Once everything has run to completion, the QLabs world should look like the foll
     ```
 
 **IMPORTANT:** For tips and guides on how to develop in this container, visit the [Devlopment Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md).
-
-## How to stop the RT Model
-
-When the Setup_Competition_Map.py file gets run (or any other base scenario file provided), a real-time application (RT Model) is deployed that communicates with the virtual QCar 2. This RT Model is what the QCar2 ROS nodes communicate with. It is important to gracefully stop this model once you are no longer using your current workspace. Run the following commands to stop the RT Model:
-
-1. Using the Quanser Virtual Environment Docker container, navigate to the following directory:
-
-    ```bash
-    cd /home/qcar2_scripts/python
-    ```
-
-2. To stop the RT Model run the following command:
-
-    ```bash
-    python3 qcar2_stop.py
-    ```
