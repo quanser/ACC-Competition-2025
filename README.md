@@ -7,7 +7,7 @@ This Github Repo will host all the competition resources you will need to succes
 - There is a new [Development Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md) to help understand how to develop in this Docker environment.
 - There is a new [Detailed Scenario](https://github.com/quanser/ACC-Competition-2025/blob/main/Detailed_Scenario.md) to help provide a target for your algorithms.
 - There is a new [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md) to help address common issues.
-- **To get started with the competition please view the [Software_Guides](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions%20.md) folder.**
+- **To get started with the competition please view the [Software_Guides](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions.md) folder.**
 - **We want to make it very clear that the intended use case is using Ubuntu 24.04, an Nvidia based graphics card, and ROS2 Humble via our Docker container for the competition.**
 - Important updates have been made to the [ACC_Software_Instructions](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions%20.md). Please check them out to ensure any issues you are running into haven't been solved yet.
 - If you have any questions not answered in the [Discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab or the [Issues](https://github.com/quanser/ACC-Competition-2025/issues) tab, please email studentcompetition@quanser.com.
@@ -29,7 +29,7 @@ More details will be released about stages 2 and 3 in a subsequent handbook.
 
 Stage 1 will have a **video submission** and the criteria that will be considered is laid out in the [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook).
 
-To begin with the competition using ROS and Linux follow the [Software_Guides](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions%20.md).
+To begin with the competition using ROS and Linux follow the [Software_Guides](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions.md).
 
 ## ❓ FAQ ❓
 
@@ -50,7 +50,7 @@ We would also like you to post any issues with supplied resources if you find th
 - [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md)
 - [Detailed Scenario](https://github.com/quanser/ACC-Competition-2025/blob/main/Detailed_Scenario.md)
 - [Development Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md)
-- [How to setup my Linux machine](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions%20.md)
+- [How to setup my Linux machine](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions.md)
 - [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook)
 - [Competition Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z)
   - Password: acc2025denver

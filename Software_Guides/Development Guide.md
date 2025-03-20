@@ -24,7 +24,7 @@ There are 3 components to the development environment that has been constructed 
 
 ![QLabsDevelopmentVennDiagram](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/DevelopmentVennDiagram.png)
 
-To set these 3 components up, you will need to follow the [ACC Software Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions%20.md) document.
+To set these 3 components up, you will need to follow the [ACC Software Setup](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/ACC%20Software%20Setup%20Instructions.md) document.
 
 ### Quanser Virtual Container
 
