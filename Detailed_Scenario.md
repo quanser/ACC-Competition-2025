@@ -1,4 +1,4 @@
-# Detailed Scenario
+# Detailed Scenario <!-- omit in toc -->
 
 Since the definitition of the video submission has been vague, the development team wanted to provide the teams with a clear objective to shoot for and surpass. This objective is represented in [this video](https://youtu.be/NtgBwlfGbMc).
 
@@ -34,6 +34,13 @@ ros2 param set qcar2_hardware led_color_id <value>
 
 They are formatted as `0: red , 1: green, 2: blue, 3: yellow , 4: cyan , 5: magenta`.
 
+## Base Coordinate Frame
+
+As mentioned in the Handbook, the base coordinate frame for the competition is the origin of the competition map. This is also the origin of the QLabs world and is shown here:
+
+![OriginOfTheBaseCoordinateFrame]()
+
+All coordinates given will be with respect to this origin.
 
 ## Expectatations
 

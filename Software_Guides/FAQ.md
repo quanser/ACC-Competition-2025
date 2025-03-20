@@ -5,6 +5,8 @@ This FAQ is for questions that require a more detailed response and might be rel
 - [How can I reset the entire setup of my resources?](#how-can-i-reset-the-entire-setup-of-my-resources)
 - [QCar 2 won't spawn in the open plane](#qcar-2-wont-spawn-in-the-open-plane)
 - [Hardware requirements and performance expectations](#hardware-requirements-and-performance-expectations)
+- [What are my camera intrinsics?](#what-are-my-camera-intrinsics)
+- [What are the transformation matrices between the different sensors?](#what-are-the-transformation-matrices-between-the-different-sensors)
 
 ## How can I reset the entire setup of my resources?
 
@@ -74,3 +76,33 @@ To see the performance of your machine do the following:
 - Navigate to the Plane world in QLabs
 - Turn on 'show comms per second' and 'show frames per second' in the settings:
 ![Turning on CPS and FPS](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/TurnOnCPSnFPS.png)
+
+## What are my camera intrinsics?
+
+The following camera intrinsics can be used in your algorithms if necessary:
+
+```python
+# CSI camera intrinsic matrix at resolution [820, 410] is:
+[[318.86    0.00  401.34]
+[  0.00  312.14  201.50]
+[  0.00    0.00    1.00]]
+
+# CSI camera distorion paramters at resolution [820, 410] are:
+[[-0.9033  1.5314 -0.0173 0.0080 -1.1659]]
+
+# D435 RGB camera intrinsic matrix at resolution [640, 480] is:
+[[455.20    0.00  308.53]
+[  0.00  459.43  213.56]
+[  0.00    0.00    1.00]]
+
+# D435 RGB camera distorion paramters at resolution [640, 480] are:
+[[-5.1135e-01  5.4549 -2.2593e-02 -6.2131e-03 -2.0190e+01]]
+```
+
+## What are the transformation matrices between the different sensors?
+
+It is important to know where each of the sensors is with respect to each other so that data can be unified correctly. There are transformation matrices in the **hardware user manual** that tell this information. The user manuals for the QCar 2 are in the following directory:
+
+```bash
+cd /home/$USER/Documents/ACC_Development/backup/src/user_manuals/qcar2
+```
