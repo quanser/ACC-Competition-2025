@@ -25,10 +25,12 @@ Please follow this guide to correctly setup Docker engine on your ground station
 Download and set up the ACC Resources:
 
 1. Download the ACC resources available from Quanser [ACC Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z).
+   
+   Password: acc2025denver
 
-2. Extract the content of ACC_Resources folder inside the Downloads folder.
+3. Extract the content of ACC_Resources folder inside the Downloads folder.
 
-3. Run the setup_linux.py to configure your development environment
+4. Run the setup_linux.py to configure your development environment
 
 How your system should look like:
 
