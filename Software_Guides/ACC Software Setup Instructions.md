@@ -45,12 +45,6 @@ How your system should look like:
 
 The purpose of this docker container is to ensure safe setup of the Quanser Interactive Labs virtual environment. The below instructions go over how to set this Docker container up.
 
-**To pull the most recent version of the Docker container (after you go through the below steps first) from Dockerhub use the following command:**
-
-```bash
-docker pull quanser/acc2025-virtual-qcar2:latest
-```
-
 1. Download the latest debian packages (only need to do once):
 
     ``` bash
@@ -93,6 +87,12 @@ docker pull quanser/acc2025-virtual-qcar2:latest
     ```bash
     docker exec -it virtual-qcar2 bash
     ```
+
+**To pull the most recent version of the Docker container (after you go through the below steps first) from Dockerhub use the following command:**
+
+```bash
+docker pull quanser/acc2025-virtual-qcar2:latest
+```
 
 ## Set Up the Development Docker Container
 
