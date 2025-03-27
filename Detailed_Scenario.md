@@ -54,3 +54,5 @@ When the judges are viewing the video submissions, they will be watching for the
 6. Moving as fast as possible (moving as fast as possible will be important for stage 2 and 3)
 
 It is important to keep in mind that this scenario only represents a single "ride". Stages 2 and 3 will require you to complete as many rides as possible in a certain time period.
+
+Team are also expected to not use the qvl library to move or gather information from the QCar 2. Doing so will **invalidate** a submission.
