@@ -103,13 +103,13 @@ For software development we will leverage the isaac_ros docker container. This c
 - Python only work (Not using ROS)
 - ROS focused solutions (Using either python/C++ to write ROS nodes)
 
-The below instructions show you how to set up the Development Docker Container.
+The below instructions show you how to set up the **Development Docker Container**.
 
 1. To get started please install [Nvidia-Container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker)
 
     **_NOTE:_**  If you're not sure what method to use, scroll to the top of the page and follow the With apt: Ubuntu, Debian' section. You will not need to configure the repository to use experimental packages.
 
-2. you can find the content of the isaac_ros container by going to the following directory:
+2. Navigate to the following directory:
 
     ```bash
     cd /home/$USER/Documents/ACC_Development/isaac_ros_common
