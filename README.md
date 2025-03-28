@@ -4,6 +4,7 @@ This Github Repo will host all the competition resources you will need to succes
 
 ## ❗ Announcements 🎤
 
+- York University has kindly shared a progress report with everyone: [York Progress](https://youtu.be/8I4VETbBJQA). We hope it provides inspiration!
 - It is important to read the [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook), which lays out the rules of the competition in detail!
 - There is a new [Development Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md) to help understand how to develop in this Docker environment.
 - There is a new [Detailed Scenario](https://github.com/quanser/ACC-Competition-2025/blob/main/Detailed_Scenario.md) to help provide a target for your algorithms.
