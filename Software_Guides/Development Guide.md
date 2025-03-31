@@ -69,7 +69,7 @@ If you do not plan on using ROS, we recommend you create the `<non_ros_developme
 
 ## How to add packages via `apt` that persist
 
-Any packages that get installed via `apt` in the command line of the Development Container do not persist once the container is closed. When you are installing packages in teh terminal, make sure to edit the Docker file called **`Dockerfile.quanser`**. This Docker file is used to configure the Development container and can be found in the following folder:
+Any packages that get installed via `apt` in the command line of the Development Container do not persist once the container is closed. When you are installing packages in the terminal, make sure to edit the Docker file called **`Dockerfile.quanser`**. This Docker file is used to configure the Development container and can be found in the following folder:
 
 ```bash
 cd /home/$USER/Documents/ACC_Development/docker
