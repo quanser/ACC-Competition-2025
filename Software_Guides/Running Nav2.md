@@ -1,4 +1,4 @@
-# Running Nav 2 on the QCar 2 <!-- omit in toc -->
+# Running Nav 2 on the Virtual QCar 2 <!-- omit in toc -->
 
 This guide will cover the commands and procedure for running the Nav 2 ROS package and setting a goal pose for the QCar 2.
 
