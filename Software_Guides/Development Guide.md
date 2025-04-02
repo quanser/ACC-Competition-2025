@@ -67,6 +67,12 @@ If you do not plan on using ROS, we recommend you create the `<non_ros_developme
                                               L <non_ros_development>/
 ```
 
+Once you place files in the folder specified, they will appear when you start the Development Docker Container in the following directory:
+
+```bash
+admin@username:/workspaces/isaac_ros-dev/<dev_files>
+```
+
 ## How to add packages via `apt` that persist
 
 Any packages that get installed via `apt` in the command line of the Development Container do not persist once the container is closed. When you are installing packages in the terminal, make sure to edit the Docker file called **`Dockerfile.quanser`**. This Docker file is used to configure the Development container and can be found in the following folder:
