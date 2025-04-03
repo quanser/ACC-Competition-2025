@@ -38,7 +38,7 @@ They are formatted as `0: red , 1: green, 2: blue, 3: yellow , 4: cyan , 5: mage
 
 As mentioned in the Handbook, the base coordinate frame for the competition is the origin of the competition map. This is also the origin of the QLabs world and is shown here:
 
-![OriginOfTheBaseCoordinateFrame]()
+![OriginOfTheBaseCoordinateFrame](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/OriginOfTheMap.png)
 
 All coordinates given will be with respect to this origin.
 
@@ -55,4 +55,4 @@ When the judges are viewing the video submissions, they will be watching for the
 
 It is important to keep in mind that this scenario only represents a single "ride". Stages 2 and 3 will require you to complete as many rides as possible in a certain time period.
 
-Team are also expected to not use the qvl library to move or gather information from the QCar 2. Doing so will **invalidate** a submission.
+Team are also expected to not use the `qvl` library to move or gather information from the QCar 2. Doing so will **invalidate** a submission.
