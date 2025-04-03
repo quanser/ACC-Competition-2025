@@ -97,6 +97,14 @@ The following camera intrinsics can be used in your algorithms if necessary:
 
 # D435 RGB camera distorion paramters at resolution [640, 480] are:
 [[-5.1135e-01  5.4549 -2.2593e-02 -6.2131e-03 -2.0190e+01]]
+
+# D435 Depth camera intrinsic matrix at resolution [640, 480] is:
+[[645.1    0.00  650.9]
+[  0.0  645.1  360.2]
+[  0.0    0.0    1.0]]
+
+# D435 Depth camera distorion paramters at resolution [640, 480] are:
+[[0 0 0 0 0]]
 ```
 
 ## What are the transformation matrices between the different sensors?
