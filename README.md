@@ -4,6 +4,7 @@ This Github Repo will host all the competition resources you will need to succes
 
 ## ❗ Announcements 🎤
 
+- A patch to the libraries has been made that allows you to open the QCar 2 HIL Card in the virtual world. Please download the [ACC resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z) and run `setup_linux.py`. Please check out the [Python Development](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md#python-development) for more details.
 - York University has kindly shared a progress video with everyone: [York Progress](https://youtu.be/8I4VETbBJQA). We hope it provides inspiration!
 - It is important to read the [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook), which lays out the rules of the competition in detail!
 - There is a new [Development Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md) to help understand how to develop in this Docker environment.
@@ -40,7 +41,7 @@ This FAQ is for questions that require a more detailed response and might be rel
 - [How can I reset the entire setup of my resources?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
 - [QCar 2 won't spawn in the open plane](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#how-can-i-reset-the-entire-setup-of-my-resources)
 - [Hardware requirements and performance expectations](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#hardware-requirements-and-performance-expectations)
-- [What are my camera intrinsics?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#what-are-my-camera-intrinsics)
+- [What are my camera intrinsics and extrinsics?](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#what-are-my-camera-intrinsics-and-extrinsics)
 - [What are the transformation matrices between the different sensors?](http://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#what-are-the-transformation-matrices-between-the-different-sensors)
 
 ## Discussions 📣

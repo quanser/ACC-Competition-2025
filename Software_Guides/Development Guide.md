@@ -10,6 +10,7 @@ The topics are listed below and will be updated with new information periodicall
   - [Quanser Virtual Container](#quanser-virtual-container)
   - [Development Container](#development-container)
 - [How to create files that persist in the container](#how-to-create-files-that-persist-in-the-container)
+- [Python Development](#python-development)
 - [How to add packages via `apt` that persist](#how-to-add-packages-via-apt-that-persist)
 - [How to add Python packages via `pip3` that persist](#how-to-add-python-packages-via-pip3-that-persist)
 - [How to stop the RT Model](#how-to-stop-the-rt-model)
@@ -59,19 +60,30 @@ When a docker container is exited, all the changes done inside the container wil
                                                       L <ros_packages_go_here>/
 ```
 
-If you do not plan on using ROS, we recommend you create the `<non_ros_development>` directory shown below outside of the ros2 directory:
+If you do not plan on using ROS, there is a `python_dev` folder for Python development specifically. This contains a few examples. Otherwise you can create a `<non_ros_development>` directory shown below outside of the `ros2` directory:
 
 ```bash
 /home/$USER/Documents/ACC_Development/Development/
                                               L ros2/
+                                              L python_dev
                                               L <non_ros_development>/
 ```
 
-Once you place files in the folder specified, they will appear when you start the Development Docker Container in the following directory:
+Once you place files in the folders `python_dev` or `<non_ros_development>`, they will appear in the following directory when you start the Development Docker Container:
 
 ```bash
 admin@username:/workspaces/isaac_ros-dev/<dev_files>
 ```
+
+## Python Development
+
+It is expected that all Python development is done in the `python_dev` folder under the following directory in the Development Container:
+
+```bash
+admin@username:/workspaces/isaac_ros-dev/python_dev
+```
+
+Please view the [Utilizing hal and pal](github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Utilizing%20hal%20and%20pal.md) guide for more details on utilizing the Quanser Python libraries. 
 
 ## How to add packages via `apt` that persist
 
