@@ -5,7 +5,7 @@ This FAQ is for questions that require a more detailed response and might be rel
 - [How can I reset the entire setup of my resources?](#how-can-i-reset-the-entire-setup-of-my-resources)
 - [QCar 2 won't spawn in the open plane](#qcar-2-wont-spawn-in-the-open-plane)
 - [Hardware requirements and performance expectations](#hardware-requirements-and-performance-expectations)
-- [What are my camera intrinsics?](#what-are-my-camera-intrinsics)
+- [What are my camera intrinsics and extrinsics?](#what-are-my-camera-intrinsics-and-extrinsics)
 - [What are the transformation matrices between the different sensors?](#what-are-the-transformation-matrices-between-the-different-sensors)
 
 ## How can I reset the entire setup of my resources?
@@ -77,9 +77,9 @@ To see the performance of your machine do the following:
 - Turn on 'show comms per second' and 'show frames per second' in the settings:
 ![Turning on CPS and FPS](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/TurnOnCPSnFPS.png)
 
-## What are my camera intrinsics?
+## What are my camera intrinsics and extrinsics?
 
-The following camera intrinsics can be used in your algorithms if necessary:
+The following camera intrinsics and extrinsics can be used in your algorithms if necessary:
 
 ```python
 # CSI camera intrinsic matrix at resolution [820, 410] is:
@@ -105,7 +105,16 @@ The following camera intrinsics can be used in your algorithms if necessary:
 
 # D435 Depth camera distorion paramters at resolution [640, 480] are:
 [[0 0 0 0 0]]
+
+# D435 From RGB to Depth Extrinsics
+# Translation is in meters
+[[   1      0.004008     0.0001655   -0.01474]
+[-0.004007      1       -0.003435  -0.0004152]
+[-0.0001792 0.003434       1       -0.0002451]
+[    0          0          0            1    ]]
 ```
+
+Only the RGB to Depth extrinsics have been provided because it is particularily useful when trying to align the RGB and Depth images.
 
 ## What are the transformation matrices between the different sensors?
 
