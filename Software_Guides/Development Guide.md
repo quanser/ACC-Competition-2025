@@ -83,7 +83,7 @@ It is expected that all Python development is done in the `python_dev` folder un
 admin@username:/workspaces/isaac_ros-dev/python_dev
 ```
 
-Please view the [Utilizing hal and pal](github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Utilizing%20hal%20and%20pal.md) guide for more details on utilizing the Quanser Python libraries. 
+Please view the [Utilizing hal and pal](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Utilizing%20hal%20and%20pal.md) guide for more details on utilizing the Quanser Python libraries. 
 
 ## How to add packages via `apt` that persist
 
