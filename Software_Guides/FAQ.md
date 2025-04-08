@@ -114,7 +114,7 @@ The following camera intrinsics and extrinsics can be used in your algorithms if
 [    0          0          0            1    ]]
 ```
 
-Only the RGB to Depth extrinsics have been provided because it is particularily useful when trying to align the RGB and Depth images.
+Only the RGB to Depth extrinsics have been provided because it is useful when trying to align the RGB and Depth images.
 
 ## What are the transformation matrices between the different sensors?
 
