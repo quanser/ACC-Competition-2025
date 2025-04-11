@@ -134,7 +134,7 @@ If you are experiencing extremely low CPS in QLabs, this is a known issue. The d
 - Your CPS is better when you limit your FPS in QLabs.
 - An alternative option is outlined below.
 
-Having a low CPS can affect the stability of control algorithms when the QCar 2 is moving at faster speeds. The judging team for the first stage will be keeping this performance issue in mind when evaluating the video submissions. It will be more important to the judges if you describe how your algorithm works in the video submission. These algorithms will be validated when the judges review your code too.
+Having a low CPS can affect the stability of control algorithms when the QCar 2 is moving at faster speeds. The judging team for the first stage will be keeping this performance issue in mind when evaluating the video submissions. It will be more important to the judges if you describe how your algorithm works and show it in action (no matter how slow) in the video submission. These algorithms will be validated when the judges review your code too.
 
 If you are selected to move to Stage 2, these constraints to reading the cameras will not be an issue on the physical QCar 2.
 
