@@ -17,8 +17,6 @@ from qvl.system import QLabsSystem
 
 #This scenario was designed to by used in the Plane world for the Self Driving Car Studio
 
-#After running this script, make sure to run your RT Model
-
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
 

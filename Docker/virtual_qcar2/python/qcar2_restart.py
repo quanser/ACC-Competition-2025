@@ -27,7 +27,7 @@ def setup(
     #QLabsRealTime().terminate_all_real_time_models(RTModelHostName='host.docker.internal')
 
     # Get the path for the QCar2 rtModel
-    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace'))
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace_studio'))
 
     # Spawn a QCar at the given initial pose
     hqcar = QLabsQCar2(qlabs)

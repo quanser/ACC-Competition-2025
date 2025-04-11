@@ -7,6 +7,7 @@ This FAQ is for questions that require a more detailed response and might be rel
 - [Hardware requirements and performance expectations](#hardware-requirements-and-performance-expectations)
 - [What are my camera intrinsics and extrinsics?](#what-are-my-camera-intrinsics-and-extrinsics)
 - [What are the transformation matrices between the different sensors?](#what-are-the-transformation-matrices-between-the-different-sensors)
+- [Why is My QLabs Performance Low?](#why-is-my-qlabs-performance-low)
 
 ## How can I reset the entire setup of my resources?
 
@@ -122,4 +123,36 @@ It is important to know where each of the sensors is with respect to each other 
 
 ```bash
 cd /home/$USER/Documents/ACC_Development/backup/src/user_manuals/qcar2
+```
+
+## Why is My QLabs Performance Low?
+
+If you are experiencing extremely low CPS in QLabs, this is a known issue. The dev team recieves a CPS of 11 when developing in the Development Container. The CPS drops significantly when more than 1 camera is initialized. Upon further investigation, this is caused by a bug in the Linux version of QLabs. Here are the recommendations and guidelines that we can give:
+
+- If your algorithm does not need more than 1 camera, modify the launch file to use only 1 camera.
+- The `rgbd` node initialzes 2 cameras by default. Please keep this in mind and manage your performance expectations when using this node.
+- Your CPS is better when you limit your FPS in QLabs.
+- An alternative option is outlined below.
+
+Having a low CPS can affect the stability of control algorithms when the QCar 2 is moving at faster speeds. The judging team for the first stage will be keeping this performance issue in mind when evaluating the video submissions. It will be more important to the judges if you describe how your algorithm works in the video submission. These algorithms will be validated when the judges review your code too.
+
+If you are selected to move to Stage 2, these constraints to reading the cameras will not be an issue on the physical QCar 2.
+
+To further address the issue, the development team is providing an alternate Python script that spawns a QCar 2 with a different RT Model. This new method will improve the CPS, but reduce the effective FPS of the cameras. It will interleave the cameras if multiple cameras are used. It will work as follows:
+
+- With 1 camera there is no effect, the camera will operate at 30 FPS and 30 FPS will be received by the ROS nodes.
+- With 2 cameras each camera will send 15 FPS.
+- With 3 cameras each camera will send 10 FPS.
+
+The ROS nodes will always think they are receiving 30 FPS even if the effective framerate is lower. For the 2 camera example, each camera will send an effective framerate of 15 FPS and the ROS nodes will receive 30 FPS, but every frame is duplicated (i.e. each frame sent from QLabs persists for 2 frames on the ROS side). Please keep this in mind when you are using algorithms that are expecting camera information at 30 FPS.
+
+An additional effect of this is that the camera frames sent by QLabs are staggered. In other words for the 2 camera setup, QLabs is operating at 30 FPS but sends a frame from Camera #1 first then in the next cycle camera #2 will send a frame. Camera #1 and Camera #2 alternate between sending frames, hence the staggering effect. The result of this is that the ROS nodes receive camera information that is out of sync by 1/30th of a second. Please keep this in mind when you are utilizing camera information for your algorithms.
+
+To use this interleaved method, look for the scripts that have `interleaved` in their name within the Quanser Virtual Environment container!
+
+```bash
+root@username:/home/qcar2_scripts/python/Base_Scenarios_Python/#
+                                                    L Setup_Competition_Map_Interleaved.py
+                                                    L Setup_Real_Scenario_Interleaved.py
+                                                    L ...
 ```

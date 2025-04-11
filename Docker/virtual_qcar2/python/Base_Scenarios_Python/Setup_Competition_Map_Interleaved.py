@@ -18,6 +18,8 @@ from qvl.crosswalk import QLabsCrosswalk
 
 #This scenario was designed to by used in the Plane world for the Self Driving Car Studio
 
+#This RT Model uses interleaving to improve the performance of QLabs
+
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
 
 #endregion
@@ -82,7 +84,7 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
                 configuration=0, 
                 waitForConfirmation=True)
     
-    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace_studio'))
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace_studio_interleaved'))
     QLabsRealTime().start_real_time_model(rtModel)
 
     #spawn cameras 1. birds eye, 2. edge 1, possess the qcar
@@ -116,7 +118,7 @@ def setup(initialPosition = [-1.205, -0.83, 0.005], initialOrientation = [0, 0, 
 
 #function to terminate the real time model running
 def terminate():
-    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace_studio'))
+    rtModel = os.path.normpath(os.path.join(os.environ['RTMODELS_DIR'], 'QCar2/QCar2_Workspace_studio_interleaved'))
     QLabsRealTime().terminate_real_time_model(rtModel)
 
 if __name__ == '__main__':
