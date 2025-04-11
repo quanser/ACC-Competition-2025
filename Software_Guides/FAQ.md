@@ -127,7 +127,7 @@ cd /home/$USER/Documents/ACC_Development/backup/src/user_manuals/qcar2
 
 ## Why is My QLabs Performance Low?
 
-If you are experiencing extremely low CPS in QLabs, this is a known issue. The dev team recieves a CPS of 11 when developing in the Development Container. The CPS drops significantly when more than 1 camera is initialized. Upon further investigation, this is caused by a bug in the Linux version of QLabs. Here are the recommendations and guidelines that we can give:
+If you are experiencing extremely low CPS in QLabs, this is a known issue. The dev team recieves a CPS of 11 when developing in the Development Container. The CPS drops significantly when more than 1 camera is initialized. Upon further investigation, this is caused by a performance limitation in the Linux version of QLabs. Here are the recommendations and guidelines that we can give:
 
 - If your algorithm does not need more than 1 camera, modify the launch file to use only 1 camera.
 - The `rgbd` node initialzes 2 cameras by default. Please keep this in mind and manage your performance expectations when using this node.
