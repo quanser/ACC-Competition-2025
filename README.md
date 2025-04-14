@@ -4,7 +4,7 @@ This Github Repo will host all the competition resources you will need to succes
 
 ## ❗ Announcements 🎤
 
-- A major bug was found in the QLabs interface to ROS, please check the following post out if you are receiving very low QLabs CPS performance: [Why is My QLabs Performance Low?](http://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#why-is-my-qlabs-performance-low)
+- A big performance limitation was found in the QLabs interface to ROS, please check the following post out if you are receiving very low QLabs CPS performance: [Why is My QLabs Performance Low?](http://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md#why-is-my-qlabs-performance-low)
 - A patch to the libraries has been made that allows you to open the QCar 2 HIL Card in the virtual world. Please download the [ACC resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z) and run `setup_linux.py`. Please check out the [Python Development](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md#python-development) for more details.
 - York University has kindly shared a progress video with everyone: [York Progress](https://youtu.be/8I4VETbBJQA). We hope it provides inspiration!
 - It is important to read the [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook), which lays out the rules of the competition in detail!
