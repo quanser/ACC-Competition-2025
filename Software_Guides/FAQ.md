@@ -92,16 +92,16 @@ The following camera intrinsics and extrinsics can be used in your algorithms if
 [[-0.9033  1.5314 -0.0173 0.0080 -1.1659]]
 
 # D435 RGB camera intrinsic matrix at resolution [640, 480] is:
-[[455.20    0.00  308.53]
-[  0.00  459.43  213.56]
+[[605    0.00  330.6]
+[  0.00  604.2  251.3]
 [  0.00    0.00    1.00]]
 
 # D435 RGB camera distorion paramters at resolution [640, 480] are:
-[[-5.1135e-01  5.4549 -2.2593e-02 -6.2131e-03 -2.0190e+01]]
+[[0 0 0 0 0]]
 
 # D435 Depth camera intrinsic matrix at resolution [640, 480] is:
-[[645.1    0.00  650.9]
-[  0.0  645.1  360.2]
+[[385.6    0.00  321.9]
+[  0.0  385.6  237.3]
 [  0.0    0.0    1.0]]
 
 # D435 Depth camera distorion paramters at resolution [640, 480] are:
