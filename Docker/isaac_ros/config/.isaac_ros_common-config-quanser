@@ -1,0 +1,2 @@
+CONFIG_IMAGE_KEY="ros2_humble.quanser.user"
+CONFIG_DOCKER_SEARCH_DIRS=(/home/$USER/Documents/ACC_Development/docker)

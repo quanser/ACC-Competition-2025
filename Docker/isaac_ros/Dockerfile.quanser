@@ -1,0 +1,46 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+
+# Remove the apt.kitware.com sources because its signatures seem to be out of date.
+# We don't need it anymore as it is only needed for CMake, which is already
+# installed by the upper image layers (BASE_IMAGE) anyways.
+RUN test -f /etc/apt/sources.list.d/kitware.list && rm /etc/apt/sources.list.d/kitware.list
+
+# Install all the necessary non-Quanser debian packages
+RUN apt-get update && apt-get install -y \
+    ros-humble-vision-opencv \
+    ros-humble-control-msgs \
+    ros-humble-image-transport \
+    ros-humble-cartographer \
+    ros-humble-cartographer-ros \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install system libraries that quanser-sdk depends on
+RUN apt-get update && apt-get install -y \
+    libasound2-dev \
+    libsndfile1-dev \
+    libavcodec-dev \
+    libavformat-dev \
+    libglib2.0-dev \
+    libfreenect-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN cp /usr/local/bin/pip3.8 /usr/bin/
+
+# Install debian files from online
+RUN wget --no-cache https://repo.quanser.com/keys/Quanser.pub
+RUN wget --no-cache https://repo.quanser.com/debian/prerelease/config/99-quanser -O /etc/apt/preferences.d/99-quanser
+RUN wget --no-cache https://repo.quanser.com/debian/prerelease/config/quanser_focal.sources -O /etc/apt/sources.list.d/quanser_focal.sources
+RUN gpg --dearmor --homedir /root --output /usr/share/keyrings/Quanser.gpg Quanser.pub
+RUN rm Quanser.pub
+
+# Install quanser-sdk and quarc-runtime
+RUN apt-get update && apt-get install -y \
+    quanser-sdk \
+    quarc-runtime \
+    && rm -rf /var/lib/apt/lists/*
+
+
+# Copy quanser hal and pal folders inside isaac_ros and define environment variable
+COPY ./libraries /home/Quanser/libraries
+ENV PYTHONPATH=/home/Quanser/libraries/python
