@@ -1,6 +1,7 @@
 # Physical Software Setup for the ACC Competition <!-- omit in toc -->
 
-Welcome to the ACC Quanser Self-Driving Car Student Competition - software setup!
+Welcome to the ACC Quanser Self-Driving Car Student Competition software setup!
+
 In this document we will describe:
 
 - [System Requirements](#system-requirements)
@@ -11,7 +12,7 @@ In this document we will describe:
 
 **System Requirements**:
 
-- The QCar 2 will be configured with the necessary system requirements
+- The QCar 2 provided will be configured with the necessary system requirements
 
 **Warning**: If you plan on changing any native packages on the QCar 2, consult the Software sections at the bottom of the following page: [QCar 2 QUARC Documentation](https://docs.quanser.com/quarc/documentation/qcar2.html)
 
@@ -40,7 +41,7 @@ docker rm <CONTAINER ID of hello-world>
 
 2. Extract the content of ACC_Resources folder inside the Downloads folder.
 
-3. Run the setup_linux.py to configure your development environment
+3. Run the `setup_qcar2.py` file to configure your development environment
 
 How your system should look like:
 
@@ -59,13 +60,13 @@ For software development we will leverage the isaac_ros docker container. This c
 
 - ROS focused solutions (Using either python/C++ to publish/subscribe to the QCar 2 nodes)
 
-The below instructions show you how to set up the **Development Docker Container**.
+Note: Isaac ROS is already installed on the QCar 2. You will only need to install the Nvidia Container Toolkit.
 
 1. To get started please install [Nvidia-Container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-the-nvidia-container-toolkit)
 
     **_NOTE:_**  If you're not sure what to install, use the [Debian-based installation for the toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#with-apt-ubuntu-debian). Then [Configure Your Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#with-apt-ubuntu-debian).
 
-    The dev team had to install `nvidia-container-toolkit-base` package manually since the instructions on the Nvidia website was failing to install this.
+    The dev team had to install `nvidia-container-toolkit-base` package manually since the instructions on the Nvidia website commands were failing to install this. Please do this if necessary.
 
 2. Navigate to the following directory:
 
@@ -85,46 +86,62 @@ The below instructions show you how to set up the **Development Docker Container
 
 ## How to Run the ROS2 Humble Nodes
 
-Once you are ready to start developing, follow these steps to start the virtual environment:
+To ensure safe development, the QCar 2 nodes should not be touched and no packages should be installed on the native Ubuntu. Instead, you will install packages on the Isaac-ROS container and write scripts within the container that will communicate with the ROS nodes running natively. This structure will look like the following:
 
-1. Natively in Ubuntu, open the QLabs application and navigate to the SDCS then the Open Plane.
+![Development Structure](https://github.com/quanser/ACC-Competition-2025/tree/stage2/Software_Guides/Pictures/software_architecture_stage2.png)
 
-2. If you do not have a Quanser Virtual Environment Docker container open, follow the above sections to open one.
+Use the following steps to run the ROS2 nodes for the first time. Once you have done this once, you won't need to do the steps involving building the nodes again.
 
-3. Using the Quanser Virtual Environment Docker container, navigate to the following directory:
+1. Source ROS2 Humble:
 
     ```bash
-    cd /home/qcar2_scripts/python
+    source /opt/ros/humble/setup.bash
     ```
 
-4. Run the following Python script to spawn the competition map into QLabs:
+2. Transfer the ROS nodes and interfaces into the ros2 directory:
 
     ```bash
-    python3 Base_Scenarios_Python/Setup_Competition_Map.py
+    cp -r -u /home/$USER/Documents/ACC_Development/Development/ros2/src /home/$USER/ros2
     ```
 
-Once everything has run to completion, the QLabs world should look like the following:
-
-![QLabs after running Setup_Competition_Map.py](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Pictures/HowToStart.png)
-
-5. If you do not have a Development Docker (Isaac-ROS) container open, follow the above section to open one. The following commands should be run in the Development container.
-
-6. Compile the QCar2 ros nodes using:
+3. Make sure Python 3.8 is being used to build the nodes:
 
     ```bash
+    PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.8/dist-packages
+    ```
+
+4. Navigate to the ros2 folder and build the nodes:
+
+    ```bash
+    cd /home/$USER/ros2
     colcon build
     ```
 
-6. Source the QCar2 packages using:
+5. Source the recently compiled ROS packages:
 
     ```bash
-    . install/setup.bash
+    source install/setup.bash
     ```
 
-7. Launch the nodes for the QCar using the launch file configured for the virtual QCar:
+6. Run the nodes using the following command:
 
     ```bash
-    ros2 launch qcar2_nodes qcar2_virtual_launch.py
+    ros2 launch qcar2_nodes qcar2_launch.py
     ```
+
+7. Open an Isaac-ROS container in a NEW terminal using the following commands:
+
+    ```bash
+        cd /home/$USER/Documents/ACC_Development/isaac_ros_common
+        ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development
+    ```
+
+8. Open RViz2:
+
+    ```bash
+    rviz2
+    ```
+
+9. Add 'By Topic' relevant topics such as /laserscan.
 
 **IMPORTANT:** For tips and guides on how to develop in this container, visit the [Devlopment Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md).

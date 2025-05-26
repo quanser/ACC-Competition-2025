@@ -1,5 +1,6 @@
 # Welcome to Stage 2 and 3 of the ACC 2025 Competition!
 
+This Github is still under construction!
 This Github Repo will host all the Stage 2 and 3 competition resources you will need to successfuly compete at the in-person event in Colorado.
 
 ## ❗ Stage 2 and 3 Announcements
@@ -18,7 +19,7 @@ Each team will have access to a QCar 2 and will implement the algorithm they dev
 
 Stage 3 is the in-person event in Colorado at the ACC. There is a [section at the bottom](#details-of-a-ride) that contains the important information about completing rides during the competition. These details are more clearly laid out in the Stage 2 and 3 Handbook.
 
-Your goal during Stage 3 will be to maximize the amount of money that you earn in a period of 5-minutes. Teams will receive a list of rides that they can take in the form of a .txt file. An example of this file has been provided (XXXXXXXXXXXXXX). For each completed ride a team does, they will receive a rating. This rating will multiply the amount of money earned for a ride, so it is beneficial to follow the rule of the road. If there are too many infractions during a ride, the team will not receive any money for that ride! For more thorough details about the scoring please read the Handbook.
+Your goal during Stage 3 will be to maximize the amount of money that you earn in a period of 5-minutes. Teams will receive a list of rides that they can take in the form of a .txt file. An example of this file has been provided (XXXXXComing SoonXXXXXX). For each completed ride a team does, they will receive a rating. This rating will multiply the amount of money earned for a ride, so it is beneficial to follow the rule of the road. If there are too many infractions during a ride, the team will not receive any money for that ride! For more thorough details about the scoring please read the Handbook.
 
 ## ❓ FAQ
 
