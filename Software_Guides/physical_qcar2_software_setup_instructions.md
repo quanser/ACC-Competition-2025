@@ -2,6 +2,8 @@
 
 Welcome to the ACC Quanser Self-Driving Car Student Competition software setup!
 
+**IMPORTANT NOTE: The password for the QCar 2 is `nvidia`**
+
 In this document we will describe:
 
 - [System Requirements](#system-requirements)
@@ -77,7 +79,7 @@ Note: Isaac ROS is already installed on the QCar 2. You will only need to instal
 3. To start the container use the command
 
     ```bash
-    ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development
+    ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/dev
     ```
 
     **_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.
@@ -132,8 +134,8 @@ Use the following steps to run the ROS2 nodes for the first time. Once you have 
 7. Open an Isaac-ROS container in a NEW terminal using the following commands:
 
     ```bash
-        cd /home/$USER/Documents/ACC_Development/isaac_ros_common
-        ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development
+    cd /home/$USER/Documents/ACC_Development/isaac_ros_common
+    ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/dev
     ```
 
 8. Open RViz2:
