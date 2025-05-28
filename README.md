@@ -5,7 +5,7 @@ This Github Repo will host all the Stage 2 and 3 competition resources you will 
 
 ## ❗ Stage 2 and 3 Announcements
 
-- The list of coordinates and example rides can be found here: [coordinates_and_rides.txt](https://github.com/quanser/ACC-Competition-2025/tree/stage2/coordinates_and_rides.txt)
+- The list of coordinates and example rides can be found here: [coordinates_and_rides.txt](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Handbook/coordinates_and_rides_example.txt)
 - It is very important that everyone participating looks at the [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/stage2/Handbook)
 - If you have any questions not answered in the [Discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab or the [Issues](https://github.com/quanser/ACC-Competition-2025/issues) tab, please email studentcompetition@quanser.com.
 
@@ -20,7 +20,7 @@ Each team will have access to a QCar 2 and will implement the algorithm they dev
 
 Stage 3 is the in-person event in Colorado at the ACC. There is a [section at the bottom](#details-of-a-ride) that contains the important information about completing rides during the competition. These details are more clearly laid out in the Stage 2 and 3 Handbook.
 
-Your goal during Stage 3 will be to maximize the amount of money that you earn in a period of 5-minutes. Teams will receive a list of rides that they can take in the form of a .txt file. An example of this file has been provided here: [coordinates_and_rides.txt](https://github.com/quanser/ACC-Competition-2025/tree/stage2/coordinates_and_rides.txt). These coordinates are denoted as numbers (i.e. 1, 2, 3, ect.). This list will not change for the competition. What will change is the list of rides at the bottom that are denoted by letters (i.e. A,B,C., ect.).
+Your goal during Stage 3 will be to maximize the amount of money that you earn in a period of 5-minutes. Teams will receive a list of rides that they can take in the form of a .txt file. An example of this file has been provided here: [coordinates_and_rides.txt](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Handbook/coordinates_and_rides_example.txt). These coordinates are denoted as numbers (i.e. 1, 2, 3, ect.). This list will not change for the competition. What will change is the list of rides at the bottom that are denoted by letters (i.e. A,B,C., ect.).
 
 For each completed ride a team does, they will receive a rating. This rating will multiply the amount of money earned for a ride, so it is beneficial to follow the rules of the road. If there are too many infractions during a ride, the team will not receive any money for that ride! For more thorough details about the scoring please read the [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/stage2/Handbook).
 
