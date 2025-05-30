@@ -81,7 +81,7 @@ Note: Isaac ROS is already installed on the QCar 2. You will only need to instal
     sudo apt install nvidia-container-toolkit-base
     ```
 
- 2. [Configure Your Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker). You can ignore the Rootless Mode instructions.
+2. [Configure Your Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker). You can ignore the Rootless Mode instructions.
 
     **_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.
 
