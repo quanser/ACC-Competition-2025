@@ -1,4 +1,4 @@
-# Physical Software Setup for the ACC Competition <!-- omit in toc -->
+# Physical QCar 2 Software Setup for the ACC Competition <!-- omit in toc -->
 
 Welcome to the ACC Quanser Self-Driving Car Student Competition software setup!
 
