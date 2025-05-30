@@ -150,7 +150,7 @@ Use the following steps to run the ROS2 nodes for the first time. Once you have 
 9. Source ROS
 
     ```bash
-    source . install/setup.bash
+    source install/setup.bash
     ```
 
 10. Open RViz2:
