@@ -36,8 +36,8 @@ We would also like you to post any issues with supplied resources if you find th
 
 ## 🗄️ Resources
 
-- [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/FAQ.md)
-- [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/main/Handbook)
+- [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/FAQ.md)
+- [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/stage2/Handbook)
 - [Competition Resources](https://quanserinc.box.com/s/g2690n3jwbhquwr8uqdz0b45m5wx945z)
   - Password: acc2025denver
 - [Competition Website](https://www.quanser.com/winners/2025-american-control-conference-self-driving-car-student-competition/)
