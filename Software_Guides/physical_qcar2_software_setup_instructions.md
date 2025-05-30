@@ -159,6 +159,6 @@ Use the following steps to run the ROS2 nodes for the first time. Once you have 
     rviz2
     ```
 
-11. Add 'By Topic' relevant topics such as /laserscan. For /laserscan, switch the Fixed frame to `base_scan`
+11. Add 'By Topic' relevant topics such as `/laserscan`. For `/laserscan`, switch the Fixed frame in Global options to `base_scan` by typing it in.
 
 **IMPORTANT:** For tips and guides on how to develop in this container, visit the [Devlopment Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md).
