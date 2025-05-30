@@ -7,7 +7,7 @@ Welcome to the ACC Quanser Self-Driving Car Student Competition software setup!
 In this document we will describe:
 
 - [System Requirements](#system-requirements)
-- [Set Up the Isaac-ROS Container](#set-up-the-isaac-ros-container)
+- [Set Up the Isaac-ROS (Development) Container](#set-up-the-isaac-ros-development-container)
 - [How to Run the ROS2 Humble Nodes](#how-to-run-the-ros2-humble-nodes)
 
 ## System Requirements
@@ -26,7 +26,7 @@ Docker should be installed by default on the QCar 2. Please check that it is by 
 docker run hello-world
 ```
 
-Make sure your QCar 2 is connected to the internet. If this does not work, please raise an issue on the Github.
+Make sure your QCar 2 is connected to the internet. You should see a `Hello from Docker` somewhere in the output. If this does not work, please raise an issue on the Github.
 
 To remove this container use the following commands:
 
@@ -43,9 +43,16 @@ docker rm <CONTAINER ID of hello-world>
 
 2. Extract the content of ACC_Resources folder inside the Downloads folder.
 
-3. Run the `setup_qcar2.py` file to configure your development environment
+3. Navigate into the ACC_Resouces folde and run the `setup_qcar2.py` Python script:
 
-How your system should look like:
+```bash
+cd /home/$USER/Downloads/ACC_Resources
+python setup_qcar2.py
+```
+
+If this is your FIRST TIME RUNNING THIS SCRIPT, restart your system using `sudo reboot now`, then run the script again.
+
+Once you run this, your system should look like this:
 
 ``` bash
 /home/$USER/Documents/ACC_Development/ 
@@ -56,7 +63,7 @@ How your system should look like:
                         L backup/
 ```
 
-## Set Up the Isaac-ROS Container
+## Set Up the Isaac-ROS (Development) Container
 
 For software development we will leverage the isaac_ros docker container. This container can be used for:
 
@@ -66,31 +73,23 @@ Note: Isaac ROS is already installed on the QCar 2. You will only need to instal
 
 1. To get started please install [Nvidia-Container-toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-the-nvidia-container-toolkit)
 
-    **_NOTE:_**  If you're not sure what to install, use the [Debian-based installation for the toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#with-apt-ubuntu-debian). Then [Configure Your Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#with-apt-ubuntu-debian).
+    **_NOTE:_**  Make sure you install the [Debian-based installation for the toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#with-apt-ubuntu-debian). And, do not set up the experimental packages repo. Then [Configure Your Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker).
 
-    The dev team had to install `nvidia-container-toolkit-base` package manually since the instructions on the Nvidia website commands were failing to install this. Please do this if necessary.
-
-2. Navigate to the following directory:
+    During the installation of the `nvidia-container-toolkit` you may receive an error that the `nvidia-container-toolkit-base` package is mission. Please install it manually using the following command:
 
     ```bash
-    cd /home/$USER/Documents/ACC_Development/isaac_ros_common
+    sudo apt install nvidia-container-toolkit-base
     ```
 
-3. To start the container use the command
-
-    ```bash
-    ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/dev
-    ```
+ 2. [Configure Your Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#configuring-docker). You can ignore the Rootless Mode instructions.
 
     **_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.
-
-4. **To open additional terminals attached to the Development docker container**, open a new terminal and run Steps 2 & 3 again.
 
 ## How to Run the ROS2 Humble Nodes
 
 To ensure safe development, the QCar 2 nodes should not be touched and no packages should be installed on the native Ubuntu. Instead, you will install packages on the Isaac-ROS container and write scripts within the container that will communicate with the ROS nodes running natively. This structure will look like the following:
 
-![Development Structure](https://github.com/quanser/ACC-Competition-2025/tree/stage2/Software_Guides/Pictures/software_architecture_stage2.png)
+![Development Structure](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/Pictures/software_architecture_stage2.png)
 
 Use the following steps to run the ROS2 nodes for the first time. Once you have done this once, you won't need to do the steps involving building the nodes again.
 
@@ -119,31 +118,47 @@ Use the following steps to run the ROS2 nodes for the first time. Once you have 
     colcon build
     ```
 
-5. Source the recently compiled ROS packages:
+    There may be some warnings, but these can be ignored.
+
+5. Copy the compiled ROS nodes and interfaces to the container so that the container has access to the messages the QCar nodes are using:
+
+    ```bash
+    cp -r ~/ros2/install/ ~/Documents/ACC_Development/dev/
+    ```
+
+6. Source the recently compiled ROS packages:
 
     ```bash
     source install/setup.bash
     ```
 
-6. Run the nodes using the following command:
+7. Run the nodes using the following command:
 
     ```bash
     ros2 launch qcar2_nodes qcar2_launch.py
     ```
 
-7. Open an Isaac-ROS container in a NEW terminal using the following commands:
+8. Open an Isaac-ROS container in a NEW terminal using the following commands:
 
     ```bash
     cd /home/$USER/Documents/ACC_Development/isaac_ros_common
     ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/dev
     ```
 
-8. Open RViz2:
+    Note: To open additional terminals, run the above 2 commands in a new terminal.
+
+9. Source ROS
+
+    ```bash
+    source . install/setup.bash
+    ```
+
+10. Open RViz2:
 
     ```bash
     rviz2
     ```
 
-9. Add 'By Topic' relevant topics such as /laserscan.
+11. Add 'By Topic' relevant topics such as /laserscan. For /laserscan, switch the Fixed frame to `base_scan`
 
 **IMPORTANT:** For tips and guides on how to develop in this container, visit the [Devlopment Guide](https://github.com/quanser/ACC-Competition-2025/blob/main/Software_Guides/Development%20Guide.md).

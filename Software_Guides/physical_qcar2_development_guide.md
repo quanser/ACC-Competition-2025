@@ -12,7 +12,7 @@ This document will show the architecture of the software on the physical QCar 2 
 
 The physical QCar 2 system will have a slightly different software architecture than stage 1 of the competition. The QCar 2 nodes will be run in the native Ubuntu OS, while any development will be done in the Isaac-ROS container. You are not intended to modify the base ROS2 nodes and instead will only modify packages and scripts within the Isaac-ROS container. This will ensure a safe development environment for all participants.
 
-![Development Structure](https://github.com/quanser/ACC-Competition-2025/tree/stage2/Software_Guides/Pictures/software_architecture_stage2.png)
+![Development Structure](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/Pictures/software_architecture_stage2.png)
 
 It is important that teams understand that changing packagaes in the native Ubuntu OS can damage the QCar 2 software irrepairably. Before updating any packages, please make sure they do not affect the packages in Software Section of the following document: [QCar2 QUARC Documentation](https://docs.quanser.com/quarc/documentation/qcar2.html).
 
