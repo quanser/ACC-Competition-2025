@@ -1,0 +1,54 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+
+# Remove the apt.kitware.com sources because its signatures seem to be out of date.
+# We don't need it anymore as it is only needed for CMake, which is already
+# installed by the upper image layers (BASE_IMAGE) anyways.
+RUN test -f /etc/apt/sources.list.d/kitware.list && rm /etc/apt/sources.list.d/kitware.list
+
+# Install all the necessary non-Quanser debian packages
+RUN apt-get update && apt-get install -y \
+    ros-humble-vision-opencv \
+    ros-humble-control-msgs \
+    ros-humble-image-transport \
+    ros-humble-cartographer \
+    ros-humble-cartographer-ros \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install system libraries that quanser-sdk depends on
+RUN apt-get update && apt-get install -y \
+    libasound2-dev \
+    libsndfile1-dev \
+    libavcodec-dev \
+    libavformat-dev \
+    libglib2.0-dev \
+    libfreenect-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy the following "fake" debian pacakges because the isaac-ros docker container
+# either has the necessary files that these packages provide (e.g. nvidia-l4t-cuda).
+# Or there are files already in the container that would conflict with the package
+# (e.g. librealsense2). Note that for librealsense2 case, this means that quanser-media
+# python API would not work, but it is acceptable since direct camera access should be
+# done on the host anyways.
+COPY debian/nvidia-l4t-cuda_35.6.0-20240828020325_all.deb .
+COPY debian/librealsense2_2.49.0_arm64.deb .
+RUN apt-get install -y ./nvidia-l4t-cuda_35.6.0-20240828020325_all.deb ./librealsense2_2.49.0_arm64.deb
+RUN rm nvidia-l4t-cuda_35.6.0-20240828020325_all.deb librealsense2_2.49.0_arm64.deb
+
+# Install debian files from online
+RUN wget --no-cache https://repo.quanser.com/keys/Quanser.pub
+RUN wget --no-cache https://repo.quanser.com/debian/prerelease/config/99-quanser -O /etc/apt/preferences.d/99-quanser
+RUN wget --no-cache https://repo.quanser.com/debian/prerelease/config/qcar2.sources -O /etc/apt/sources.list.d/qcar2.sources
+RUN gpg --dearmor --homedir /root --output /usr/share/keyrings/Quanser.gpg Quanser.pub
+RUN rm Quanser.pub
+
+# Install quanser-sdk and quarc-runtime
+RUN apt-get update && apt-get install -y \
+    quanser-sdk \
+    quarc-runtime \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy quanser hal and pal folders inside isaac_ros and define environment variable
+COPY ./libraries /home/Quanser/libraries
+ENV PYTHONPATH=/home/Quanser/libraries/python
