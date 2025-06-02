@@ -1,12 +1,14 @@
-# Software Setup for the ACC Competition
+# Software Setup for the ACC Competition <!-- omit in toc -->
 
-## Description
+## Description <!-- omit in toc -->
 
 Welcome to the ACC Quanser Self-Driving Car Student Competition - software setup!
 In this document we will describe:
 
-- System requirements for the virtual portion of the ACC competition
-- How to setup the development environment
+- [System Requirements](#system-requirements)
+- [Set Up the Quanser Virtual Environment Docker Container](#set-up-the-quanser-virtual-environment-docker-container)
+- [Set Up the Development Docker Container](#set-up-the-development-docker-container)
+- [How to Run the ROS2 Humble Nodes](#how-to-run-the-ros2-humble-nodes)
 
 By the end of this document, you will have a Quanser Virtual Environment Docker Container that can be used to spawn the QCar 2 in QLabs. You will have a Development Docker Container where you will develop your code and run the ROS2 nodes. And, you will have QLabs installed. The configuration will look like this:
 
