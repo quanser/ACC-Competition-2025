@@ -91,9 +91,11 @@ To ensure safe development, the QCar 2 nodes should not be touched and no packag
 
 ![Development Structure](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/Pictures/software_architecture_stage2.png)
 
-Use the following steps to run the ROS2 nodes for the first time. Once you have done this once, you won't need to do the steps involving building the nodes again.
+Use the following steps to run the ROS2 nodes ON THE NATIVE INSTALLATION OF ROS2. Keep in mind that the qcar2 nodes are meant to be run on the native OS, which is separate from the Isaac-ros container. You will not touch the qcar2 nodes, but will communicate with them from the Isaac Ros container.
 
-1. Source ROS2 Humble:
+ Once you have done this, you won't need to do the steps involving building the nodes again.
+
+1. Open a terminal and source ROS2 Humble in the native OS:
 
     ```bash
     source /opt/ros/humble/setup.bash
@@ -120,7 +122,7 @@ Use the following steps to run the ROS2 nodes for the first time. Once you have 
 
     There may be some warnings, but these can be ignored.
 
-5. Copy the compiled ROS nodes and interfaces to the container so that the container has access to the messages the QCar nodes are using:
+5. Copy the compiled ROS nodes and interfaces to the container so that the Isaac-ros container has access to the messages the QCar nodes are using:
 
     ```bash
     cp -r ~/ros2/install/ ~/Documents/ACC_Development/dev/
@@ -137,6 +139,8 @@ Use the following steps to run the ROS2 nodes for the first time. Once you have 
     ```bash
     ros2 launch qcar2_nodes qcar2_launch.py
     ```
+
+**----------------- From this point forward, you will be operating in the Isaac-ros container -----------------**
 
 8. Open an Isaac-ROS container in a NEW terminal using the following commands:
 
