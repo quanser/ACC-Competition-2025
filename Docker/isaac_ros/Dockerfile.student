@@ -1,0 +1,15 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+
+# Install all the necessary debian packages for students.
+# The example here installs "tree", which shows the structure
+# of a directory in a tree-like format.
+RUN apt-get update && apt-get install -y \
+    tree \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install all the necessary python modules via pip for students
+# The example here installs "pyqtgraph", which is a scientific
+# graphics and GUI Python library.
+RUN python3 -m pip install -U \
+    pyqtgraph
