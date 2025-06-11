@@ -1,3 +1,5 @@
+<img src="https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/Pictures/accBannerv2.png" width="100%">
+
 # Welcome to Stage 2 and 3 of the ACC 2025 Competition!
 
 This Github Repo will host all the Stage 2 and 3 competition resources you will need to successfuly compete at the in-person event in Colorado.
