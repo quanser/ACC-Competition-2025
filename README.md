@@ -1,16 +1,16 @@
 # Welcome to Stage 2 and 3 of the ACC 2025 Competition!
 
-This Github is still under construction!
 This Github Repo will host all the Stage 2 and 3 competition resources you will need to successfuly compete at the in-person event in Colorado.
 
 To get started setting up your QCar 2 visit the following guide: [Physical QCar2 Software Setup](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/physical_qcar2_software_setup_instructions.md)
 
 ## ❗ Stage 2 and 3 Announcements
 
-- A [development guide](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/physical_qcar2_development_guide.md) for the physical QCar 2 has been released.
+- [Running Isaac-ROS container with no internet guide](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/physical_qcar2_development_guide.md) has been created
+- A [development guide](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/physical_qcar2_development_guide.md) for the physical QCar 2 has been released
 - The list of coordinates and example rides can be found here: [coordinates_and_rides.txt](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Handbook/coordinates_and_rides_example.txt)
 - It is very important that everyone participating looks at the [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/stage2/Handbook)
-- If you have any questions not answered in the [Discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab or the [Issues](https://github.com/quanser/ACC-Competition-2025/issues) tab, please email studentcompetition@quanser.com.
+- Post any issues in the [Discussions](https://github.com/quanser/ACC-Competition-2025/discussions) tab or the [Issues](https://github.com/quanser/ACC-Competition-2025/issues) tab. If it is competition details related you can email studentcompetition@quanser.com.
 
 ## 🪧 Stage 2 Objective
 

@@ -4,23 +4,40 @@ This document will show the architecture of the software on the physical QCar 2 
 
 - [Stage 2 Software Architecture](#stage-2-software-architecture)
 - [How to Transfer the Virtual Isaac-ROS Container to the Physical System](#how-to-transfer-the-virtual-isaac-ros-container-to-the-physical-system)
+- [How to Run the Isaac-ROS Container with No Internet Connection](#how-to-run-the-isaac-ros-container-with-no-internet-connection)
 - [Best Practices for a Python only Setup](#best-practices-for-a-python-only-setup)
 - [How to add packages via `apt` that persist in the Isaac-ROS container](#how-to-add-packages-via-apt-that-persist-in-the-isaac-ros-container)
 - [How to add Python packages via `pip3` that persist in the Isaac-ROS container](#how-to-add-python-packages-via-pip3-that-persist-in-the-isaac-ros-container)
 
 ## Stage 2 Software Architecture
 
-The physical QCar 2 system will have a slightly different software architecture than stage 1 of the competition. The QCar 2 nodes will be run in the native Ubuntu OS, while any development will be done in the Isaac-ROS container. You are not intended to modify the base ROS2 nodes and instead will only modify packages and scripts within the Isaac-ROS container. This will ensure a safe development environment for all participants.
+The physical QCar 2 system will have a slightly different software architecture than stage 1 of the competition. The QCar 2 nodes will be run in the native Ubuntu OS, while all development will be done in the Isaac-ROS container. You are not intended to modify the base ROS2 nodes and instead will modify packages and scripts within the Isaac-ROS container. This will ensure a safe development environment for all participants.
 
 ![Development Structure](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/Pictures/software_architecture_stage2.png)
 
-It is important that teams understand that changing packagaes in the native Ubuntu OS can damage the QCar 2 software irrepairably. Before updating any packages, please make sure they do not affect the packages in Software Section of the following document: [QCar2 QUARC Documentation](https://docs.quanser.com/quarc/documentation/qcar2.html).
+It is important that teams understand that changing packages in the native Ubuntu OS can damage the QCar 2 software irrepairably. Before updating any packages, please make sure they do not affect the packages in Software Section of the following webpage: [QCar2 QUARC Documentation](https://docs.quanser.com/quarc/documentation/qcar2.html).
 
 ## How to Transfer the Virtual Isaac-ROS Container to the Physical System
 
 In Stage 1, ROS packages were created in `/home/$USER/Documents/ACC_Development/Development`. For Stage 2 please transfer these files to the `/home/$USER/Documents/ACC_Development/dev` folder. These will be pulled into the Isaac-ROS container every time it is spun up with the following command: `./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/dev`.
 
-Any Debian or Python packages you installed on the Isaac-ROS container through `Dockerfile.quanser` in Stage 1 must be transferred over to the `Dockerfile.quanser-qcar2`.
+Any Debian or Python packages you installed on the Isaac-ROS container through `Dockerfile.quanser` in Stage 1 must be transferred over to the `Dockerfile.student`.
+
+## How to Run the Isaac-ROS Container with No Internet Connection
+
+When you run the Isaac-ROS container with the script `run_dev.sh` this will check if there is an updated version of the Base Isaac-ROS container. This requires an internet connection.
+
+To run the Isaac-ROS container with no internet connection, use the commands:
+
+```bash
+cd /home/$USER/Documents/ACC_Development/isaac_ros_common
+chmod a+x ./scripts/run_local_dev.sh
+./scripts/run_local_dev.sh  /home/$USER/Documents/ACC_Development/dev
+```
+
+These commands will pull on the locally built Docker image and not check online for an updated one.
+
+Note: Once you have changed `run_local_dev.sh` to an executable file, you don't need to run the chmod command again.
 
 ## Best Practices for a Python only Setup
 
@@ -46,13 +63,13 @@ It is important to keep track of the Python packages that you have installed so 
 
 ## How to add packages via `apt` that persist in the Isaac-ROS container
 
-Any packages that get installed via `apt` in the command line of the Isaac-ROS Container do not persist once the container is closed. When you are installing packages in the terminal, make sure to edit the Docker file called **`Dockerfile.quanser-qcar2`**. This Docker file is used to configure the Isaac-ROS container and can be found in the following folder:
+Any packages that get installed via `apt` in the command line of the Isaac-ROS Container do not persist once the container is closed. When you are installing packages in the terminal, make sure to edit the Docker file called **`Dockerfile.student`**. This Docker file is used to configure the Isaac-ROS container and can be found in the following folder:
 
 ```bash
 cd /home/$USER/Documents/ACC_Development/docker/isaac_ros
 ```
 
-At the bottom of the `Dockerfile.quanser-qcar2` add your Debian packages as shown below:
+At the bottom of the `Dockerfile.student` add your Debian packages as shown below:
 
 ```bash
 # Install Debian packages
@@ -63,19 +80,19 @@ RUN apt-get update && apt-get install -y \
 
 This example will install pytransform3d and pyqtgraph everytime the container is started. **As you develop in the Development Container**, make sure you record any packages installed via `apt` in the Docker file mentioned above.
 
-**IMPORTANT:** If you ever download the ACC_Resources.zip file and run the `setup_qcar2.py` file again, this will create a new ACC_Development folder and record a backup of your previous one. Make sure to copy any changes made to `Dockerfile.quanser-qcar2` over to the new ACC_Development folder.
+**IMPORTANT:** If you ever download the ACC_Resources.zip file and run the `setup_qcar2.py` file again, this will create a new ACC_Development folder and record a backup of your previous one. Make sure to copy any changes made to `Dockerfile.student` over to the new ACC_Development folder.
 
 ## How to add Python packages via `pip3` that persist in the Isaac-ROS container
 
 **NOTE**: We recommend you use the Debian packages if they are available.
 
-Any packages that get installed via `pip3` in the command line of the Isaac-ROS Container do not persist once the container is closed. When you are installing packages in the terminal, make sure to edit the Docker file called **`Dockerfile.quanser-qcar2`**. This Docker file is used to configure the Isaac-ROS container and can be found in the following folder:
+Any packages that get installed via `pip3` in the command line of the Isaac-ROS Container do not persist once the container is closed. When you are installing packages in the terminal, make sure to edit the Docker file called **`Dockerfile.student`**. This Docker file is used to configure the Isaac-ROS container and can be found in the following folder:
 
 ```bash
 cd /home/$USER/Documents/ACC_Development/docker/isaac_ros
 ```
 
-At the bottom of the `Dockerfile.quanser-qcar2` add your Python packages as shown below:
+At the bottom of the `Dockerfile.student` add your Python packages as shown below:
 
 ```bash
 # Install Python Packages if necessary
@@ -86,4 +103,4 @@ RUN pip3 install -U \
 
 This example will install pytransform3d and pyqtgraph everytime the container is started. **As you develop in the Isaac-ROS Container**, make sure you record any packages installed via `pip3` in the Docker file mentioned above.
 
-**IMPORTANT:** If you ever download the ACC_Resources.zip file and run the `setup_qcar2.py` file again, this will create a new ACC_Development folder and record a backup of your previous one. Make sure to copy any changes made to `Dockerfile.quanser-qcar2` over to the new ACC_Development folder.
+**IMPORTANT:** If you ever download the ACC_Resources.zip file and run the `setup_qcar2.py` file again, this will create a new ACC_Development folder and record a backup of your previous one. Make sure to copy any changes made to `Dockerfile.student` over to the new ACC_Development folder.
