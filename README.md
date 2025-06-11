@@ -29,7 +29,7 @@ For each completed ride a team does, they will receive a rating. This rating wil
 
 ## ❓ FAQ
 
-This FAQ is for questions that require a more detailed response and might be relevant to everyone. Also check the [open](https://github.com/quanser/ACC-Competition-2025/issues) and [closed](https://github.com/quanser/ACC-Competition-2025/issues?q=is%3Aissue%20state%3Aclosed) issues to see if your specific problem has been addressed.
+This [FAQ](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/FAQ.md#faq--) is for questions that require a more detailed response and might be relevant to everyone. Also check the [open](https://github.com/quanser/ACC-Competition-2025/issues) and [closed](https://github.com/quanser/ACC-Competition-2025/issues?q=is%3Aissue%20state%3Aclosed) issues to see if your specific problem has been addressed.
 
 ## 📣 Discussions
 
