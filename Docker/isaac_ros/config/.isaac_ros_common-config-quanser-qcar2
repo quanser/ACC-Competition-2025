@@ -1,2 +1,2 @@
-CONFIG_IMAGE_KEY="ros2_humble.quanser-qcar2.user"
+CONFIG_IMAGE_KEY="ros2_humble.quanser-qcar2.student"
 CONFIG_DOCKER_SEARCH_DIRS=(/home/$USER/Documents/ACC_Development/docker/isaac_ros)

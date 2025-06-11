@@ -6,6 +6,10 @@ FROM ${BASE_IMAGE}
 # installed by the upper image layers (BASE_IMAGE) anyways.
 RUN test -f /etc/apt/sources.list.d/kitware.list && rm /etc/apt/sources.list.d/kitware.list
 
+# Update ros gpg key because the key in nvidia's image has an expired key for ROS repo.
+# So we need to get the latest one so that we can run apt without errors.
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
 # Install all the necessary non-Quanser debian packages
 RUN apt-get update && apt-get install -y \
     ros-humble-vision-opencv \
