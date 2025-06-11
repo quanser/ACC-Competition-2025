@@ -7,6 +7,7 @@ To get started setting up your QCar 2 visit the following guide: [Physical QCar2
 ## ❗ Stage 2 and 3 Announcements
 
 - [Running Isaac-ROS container with no internet guide](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/physical_qcar2_development_guide.md) has been created
+- For those who want to print the SDCS map, there is a detailed file here: [SDCS_Detailed_roadmap.pdf](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/SDCS_detailed_roadmap.pdf). Dimensions for the map can be found in the appendix of the handbook.
 - A [development guide](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/physical_qcar2_development_guide.md) for the physical QCar 2 has been released
 - The list of coordinates and example rides can be found here: [coordinates_and_rides.txt](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Handbook/coordinates_and_rides_example.txt)
 - It is very important that everyone participating looks at the [Handbook](https://github.com/quanser/ACC-Competition-2025/tree/stage2/Handbook)
