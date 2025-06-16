@@ -85,4 +85,4 @@ Teams may repeat the same ride number as many times as the wish. Only the best r
 
 # Visual Representation of Coordinates
 
-![Development Structure](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/Pictures/software_architecture_stage2.png)
+![Development Structure](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/Pictures/ACC_Full_Node_Visual.png)
