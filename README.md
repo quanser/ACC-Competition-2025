@@ -8,6 +8,7 @@ To get started setting up your QCar 2 visit the following guide: [Physical QCar2
 
 ## ❗ Stage 2 and 3 Announcements
 
+- [Visual Representation of the coordinates](https://github.com/quanser/ACC-Competition-2025/blob/stage2/README.md#visual-representation-of-coordinates) has been added
 - [Running Isaac-ROS container with no internet guide](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/physical_qcar2_development_guide.md#how-to-run-the-isaac-ros-container-with-no-internet-connection) has been created
 - For those who want to print the SDCS map, there is a detailed file here: [SDCS_Detailed_roadmap.pdf](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/SDCS_detailed_roadmap.pdf). Dimensions for the map can be found in the appendix of the handbook.
 - A [development guide](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/physical_qcar2_development_guide.md) for the physical QCar 2 has been released
@@ -81,3 +82,7 @@ Once all the above steps have been completed, the judges will mark down the succ
 If the team feels they want to restart the ride or they think they have received too many infractions, they can pick up their QCar 2 and place it back in the Taxi Hub Area. Any time a team touches their QCar 2, it will disqualify that ride, and they must place it back in the Taxi Hub Area.
 
 Teams may repeat the same ride number as many times as the wish. Only the best rated, completed ride for a specific ride number will contribute towards the total money earned. Any lower rated rides for the same ride number will be discarded.
+
+# Visual Representation of Coordinates
+
+![Development Structure](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/Pictures/software_architecture_stage2.png)
