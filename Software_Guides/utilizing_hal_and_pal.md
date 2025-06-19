@@ -10,6 +10,7 @@ This guide will cover all the information necessary to utilize the `hal` and `pa
 
 - [Location of Libraries](#location-of-libraries)
 - [Modifying `hal/pal`](#modifying-halpal)
+- [How to Change the LED Strip using `hal/pal`](#how-to-change-the-led-strip-using-halpal)
 - [Examples using `hal/pal`](#examples-using-halpal)
 
 ## Location of Libraries
@@ -34,6 +35,26 @@ Whenever you would like to modify `hal/pal`:
 2. Test that the changes work.
 3. Extract the libraries from the Container.
 4. Replace the `hal/pal` in `/home/$USER/Documents/ACC_Development/docker/libraries/python` outside of the container.
+
+## How to Change the LED Strip using `hal/pal`
+
+To change the LED Strip using `hal/pal` import the class `Aaaf5050McK12LED` from `quanser.devices.interfaces`. Below is an example that uses the LEDs:
+
+```python
+from quanser.devices.interfaces import Aaaf5050McK12LED
+
+# create an instance of the LED Strip class
+myLED = Aaaf5050McK12LED()
+
+#Open the serial connection to the LED Strip
+myLED.open(uri='spi://localhost:1?memsize=420,word=8,baud=3333333,lsb=off,frame=1', max_leds=33)
+
+# write all 33 LEDs to be RED
+myLED.writeColors(led_colors=[255, 0, 0], num_leds=33)
+
+# close the connection to the LED Strip
+myLED.close()
+```
 
 ## Examples using `hal/pal`
 
