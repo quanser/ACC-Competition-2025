@@ -156,3 +156,7 @@ root@username:/home/qcar2_scripts/python/Base_Scenarios_Python/#
                                                     L Setup_Real_Scenario_Interleaved.py
                                                     L ...
 ```
+## How can I control the Traffic Light
+
+Please refer to the following document: [TrafficLight_UserManual](https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/3_user_manuals/traffic_light/user_manual_traffic_light.pdf).
+
