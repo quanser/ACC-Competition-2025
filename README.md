@@ -8,7 +8,7 @@ To get started setting up your QCar 2 visit the following guide: [Physical QCar2
 
 ## ❗ Stage 2 and 3 Announcements
 
-- The [official ride list]() is up!!!
+- The [official ride list](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Handbook/official_coordinate_ride_list.txt) is up!!!
 - The wifi password for the routers at the competition is UVS_wifi
 - [Visual Representation of the coordinates](https://github.com/quanser/ACC-Competition-2025/blob/stage2/README.md#visual-representation-of-coordinates) has been added
 - [Running Isaac-ROS container with no internet guide](https://github.com/quanser/ACC-Competition-2025/blob/stage2/Software_Guides/physical_qcar2_development_guide.md#how-to-run-the-isaac-ros-container-with-no-internet-connection) has been created
