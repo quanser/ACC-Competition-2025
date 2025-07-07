@@ -1,0 +1,56 @@
+# These locations will stay the same throughout the competition
+# Please read the HANDBOOK for information on how to complete a ride
+
+# Locations (x, y, theta) [m, m, degrees]
+# The conventions for x, y, theta are based on QLabs and are the same as Stage 1
+# Headings provided are based on right handed traffic
+
+0 = [ 0.0 , 0.0, -90]
+1 = [ 0.269 , -0.049 , 90]
+2 = [ 1.127 , -1.075 , 0]
+3 = [ 1.127 , -0.820, 180]
+4 = [ 2.255 , -0.049, 90]
+5 = [ 1.984 , -0.049, -90]
+6 = [ 1.013 , 1.081, 180]
+7 = [ 1.235 , 0.791, 0]
+8 = [ -0.749 , 1.077, 180]
+9 = [ -0.749 , 0.790, 0]
+10 = [ -1.282 , -0.59, -42]
+11 = [ 0.0 , 2.033, -90]
+12 = [ 0.0 , 1.72, -90]
+13 = [ 0.269 , 1.72, 90]
+14 = [ 2.255 , 2.837, 90]
+15 = [ 1.984 , 1.72, -90]
+16 = [ 0.908 , 3.58, -80.6]
+17 = [ 1.466 , 3.02, -9.4]
+18 = [ 0.623 , 2.937, -138]
+19 = [ 0.792 , 2.729, 42]
+20 = [ 0.0 , 4.421, 180]
+21 = [ 0.0 , 4.146, 0]
+22 = [ -1.984 , 2.837. -90]
+23 = [ -1.716 , 2.837, 90]
+24 = [ -0.826 , 3.645, 0]
+25 = [ -0.857 , 1.716, -90]
+
+# This is the official ride list for the competition
+
+A: 1, 8
+B: 2, 6
+C: 4, 0
+D: 14, 22
+E: 13, 6
+F: 14, 11
+G: 8, 18
+H: 9, 15
+I: 1, 11
+J: 13, 3
+K: 18, 5
+L: 15, 22
+M: 4, 1, 8
+N: 7, 23, 11
+O: 15, 7, 13
+P: 23, 14, 2
+Q: 24, 22
+R: 24, 20
+S: 14, 24
+T: 25, 8

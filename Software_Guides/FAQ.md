@@ -8,6 +8,7 @@ This FAQ is for questions that require a more detailed response and might be rel
 - [What are my camera intrinsics and extrinsics?](#what-are-my-camera-intrinsics-and-extrinsics)
 - [What are the transformation matrices between the different sensors?](#what-are-the-transformation-matrices-between-the-different-sensors)
 - [Why is My QLabs Performance Low?](#why-is-my-qlabs-performance-low)
+- [How can I control the Traffic Light](#how-can-i-control-the-traffic-light)
 
 ## How can I reset the entire setup of my resources?
 
@@ -156,7 +157,7 @@ root@username:/home/qcar2_scripts/python/Base_Scenarios_Python/#
                                                     L Setup_Real_Scenario_Interleaved.py
                                                     L ...
 ```
+
 ## How can I control the Traffic Light
 
-Please refer to the following document: [TrafficLight_UserManual](https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/3_user_manuals/traffic_light/user_manual_traffic_light.pdf).
-
+Please refer to the Web API portion of the following document: [TrafficLight_UserManual](https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/3_user_manuals/traffic_light/user_manual_traffic_light.pdf).
