@@ -116,16 +116,26 @@ The below instructions show you how to set up the **Development Docker Container
     ```bash
     cd /home/$USER/Documents/ACC_Development/isaac_ros_common
     ```
-
-3. To start the container use the command
+3.  Switch the issact_ros_common repository to a more recent branch 
 
     ```bash
-    ./scripts/run_dev.sh  /home/$USER/Documents/ACC_Development/Development
+    git checkout release-3.2
+    ```
+4. Ensure checked‑out release-3.2 branch is up to date with the remote.
+
+    ```bash
+    git pull origin release-3.2
+    ```
+
+5. To start the container use the command
+
+    ```bash
+    ./scripts/run_dev.sh -i ros2_humble -d /home/$USER/Documents/ACC_Development/Development
     ```
 
     **_NOTE:_**  You may need to add your local user to the local Docker Group. Please restart your machine once your user has been added.
 
-4. **To open additional terminals attached to the Development docker container**, open a new terminal and run Steps 2 & 3 again.
+6. **To open additional terminals attached to the Development docker container**, open a new terminal and run Steps 2 & 3 again.
 
 ## How to Run the ROS2 Humble Nodes
 
