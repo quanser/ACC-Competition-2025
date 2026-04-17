@@ -1,3 +1,10 @@
+# This Repository is no longer being updated and any new users should use [student competition ros resources](https://github.com/quanser/student-competition-resources-ros/)
+
+_______________________________________
+_______________________________________
+
+
+
 # Welcome to the ACC 2025 Competition!
 
 This Github Repo will host all the competition resources you will need to successfuly complete the competition.
